@@ -19,6 +19,7 @@
 		94EE7F481F6E3D6C00972967 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE7F471F6E3D6C00972967 /* Navigation.swift */; };
 		94EE7F4C1F6ECB5E00972967 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE7F4B1F6ECB5E00972967 /* Job.swift */; };
 		94EE7F521F6ED36600972967 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE7F511F6ED36600972967 /* Api.swift */; };
+		94EE7F551F6EDD0800972967 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE7F541F6EDD0800972967 /* UIViewExtensions.swift */; };
 		EF3A83885B9CCD3AA3ED07A1 /* Pods_GitHubJobsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA96BCF8703C817CAA27BC90 /* Pods_GitHubJobsUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		94EE7F471F6E3D6C00972967 /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		94EE7F4B1F6ECB5E00972967 /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		94EE7F511F6ED36600972967 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Api.swift; path = GitHubJobs/Api.swift; sourceTree = "<group>"; };
+		94EE7F541F6EDD0800972967 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		B73D8667D885AC20E98FE9E4 /* Pods-GitHubJobsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubJobsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubJobsTests/Pods-GitHubJobsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA8C0AC9F33F96F88F294553 /* Pods-GitHubJobsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubJobsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubJobsUITests/Pods-GitHubJobsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EA96BCF8703C817CAA27BC90 /* Pods_GitHubJobsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubJobsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				942CAA7C1F6A0F9400C3EA74 /* AppDelegate.swift */,
+				94EE7F531F6EDCF500972967 /* Extensions */,
 				94EE7F4A1F6ECA5D00972967 /* Models */,
 				94EE7F491F6ECA4800972967 /* Webservice */,
 				94EE7F461F6E3D4B00972967 /* Navigation */,
@@ -213,6 +216,14 @@
 				94EE7F4B1F6ECB5E00972967 /* Job.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		94EE7F531F6EDCF500972967 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94EE7F541F6EDD0800972967 /* UIViewExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,6 +526,7 @@
 				94EE7F421F6E2C0200972967 /* SearchViewController.swift in Sources */,
 				942CAA7D1F6A0F9400C3EA74 /* AppDelegate.swift in Sources */,
 				94EE7F521F6ED36600972967 /* Api.swift in Sources */,
+				94EE7F551F6EDD0800972967 /* UIViewExtensions.swift in Sources */,
 				94EE7F4C1F6ECB5E00972967 /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
