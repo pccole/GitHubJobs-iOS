@@ -28,7 +28,8 @@ class SearchViewController: UIViewController {
 	
 	lazy var spinnerConstraints: [NSLayoutConstraint] = {
 		return [
-			
+			self.view.centerXAnchor.constraint(equalTo: self.spinner.centerXAnchor),
+			self.view.centerYAnchor.constraint(equalTo: self.spinner.centerYAnchor)
 		]
 	}()
 	
@@ -49,19 +50,23 @@ class SearchViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		title = "GitHub Jobs"
+		view.backgroundColor = UIColor.lightGray
 		view.addSubview(tableview)
 		view.sendSubview(toBack: tableview)
 		NSLayoutConstraint.activate(tableViewConstraints)
+		view.addSubview(spinner)
+		NSLayoutConstraint.activate(spinnerConstraints)
 		navigationController?.navigationItem.rightBarButtonItem = searchButton
-		
     }
 	
 	@objc private func searchTapped() {
 		view.bringSubview(toFront: tableview)
+		view.bringSubview(toFront: spinner)
 	}
 	
 	@objc private func clearTapped() {
-		
+		view.sendSubview(toBack: tableview)
 	}
 	
 }
