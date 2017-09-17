@@ -10,7 +10,11 @@ import UIKit
 
 class Navigation {
 	
-	let instance = Navigation()
+	static let instance = Navigation()
+	
+	var view: UIViewController {
+		return nav
+	}
 	
 	private lazy var nav: UINavigationController = {
 		let controller = UINavigationController(rootViewController: SearchViewController())
