@@ -10,26 +10,58 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+	lazy var searchButton: UIBarButtonItem = {
+		let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(searchTapped))
+		return button
+	}()
+	
+	lazy var clearButton: UIBarButtonItem = {
+		let button = UIBarButtonItem(title: "Clear", style: UIBarButtonItemStyle.done, target: self, action: #selector(clearTapped))
+		return button
+	}()
+	
+	lazy var spinner: UIActivityIndicatorView = {
+		let view = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+		view.translatesAutoresizingMaskIntoConstraints = false
+		return view
+	}()
+	
+	lazy var spinnerConstraints: [NSLayoutConstraint] = {
+		return [
+			
+		]
+	}()
+	
+	lazy var tableViewConstraints: [NSLayoutConstraint] = {
+		return [
+			self.tableview.topAnchor.constraint(equalTo: self.tableview.topAnchor),
+			self.tableview.leadingAnchor.constraint(equalTo: self.tableview.leadingAnchor),
+			self.tableview.trailingAnchor.constraint(equalTo: self.tableview.trailingAnchor),
+			self.tableview.bottomAnchor.constraint(equalTo: self.tableview.bottomAnchor)
+		]
+	}()
+	
+	let tableview: UITableView = {
+		let t = UITableView()
+		t.translatesAutoresizingMaskIntoConstraints = false
+		return t
+	}()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		view.addSubview(tableview)
+		view.sendSubview(toBack: tableview)
+		NSLayoutConstraint.activate(tableViewConstraints)
+		navigationController?.navigationItem.rightBarButtonItem = searchButton
+		
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	
+	@objc private func searchTapped() {
+		view.bringSubview(toFront: tableview)
+	}
+	
+	@objc private func clearTapped() {
+		
+	}
+	
 }
