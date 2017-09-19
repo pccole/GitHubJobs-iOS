@@ -15,11 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+		applyApperance()
 		let frame = UIScreen.main.bounds
 		window = UIWindow(frame: frame)
 		window?.rootViewController = Navigation.instance.view
 		window?.makeKeyAndVisible()
 		return true
+	}
+	
+	func applyApperance() {
+		UINavigationBar.appearance().barTintColor = UIColor.black
+		UINavigationBar.appearance().tintColor = UIColor.white
+		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
 	}
 
 	func applicationWillResignActive(_ application: UIApplication) {
