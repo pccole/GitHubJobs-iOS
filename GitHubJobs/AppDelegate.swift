@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		UINavigationBar.appearance().barTintColor = UIColor.black
 		UINavigationBar.appearance().tintColor = UIColor.white
 		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+		UIApplication.shared.statusBarStyle = .lightContent
 	}
 
 	func applicationWillResignActive(_ application: UIApplication) {
