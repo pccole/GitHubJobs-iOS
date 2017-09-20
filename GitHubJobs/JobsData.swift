@@ -18,7 +18,7 @@ class JobData {
 	private var longitude:Double?
 	private var fullTime = true
 	private var page = 1
-	private var data:[[String:Any]] = []
+	private var data = [[String:Any]]()
 	
 	private init() { }
 	
@@ -92,7 +92,7 @@ class JobData {
 				completion?(nil)
 				return
 			}
-			self.data = j
+			self.data.append(contentsOf: j)
 			completion?(j)
 		}
 	}
