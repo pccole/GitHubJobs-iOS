@@ -34,7 +34,6 @@ class JobData {
 		self.fullTime = fullTime
 		self.longitude = nil
 		self.latitude = nil
-		self.page = 1
 		let params:[String:Any] = ["description": description,
 		                           "location": location,
 		                           "full_time": fullTime]
@@ -56,7 +55,6 @@ class JobData {
 		self.longitude = long
 		self.fullTime = fullTime
 		self.location = nil
-		self.page = 1
 		let params:[String:Any] = ["description": description,
 		                           "lat": lat,
 		                           "long": long,
@@ -87,6 +85,8 @@ class JobData {
 	}
 	
 	private func jobData(params:[String:Any], completion:Completion) {
+		page = 1
+		data.removeAll()
 		Api.instance.getJobs(params: params) { (json:[[String : Any]]?) in
 			guard let j = json else {
 				completion?(nil)
