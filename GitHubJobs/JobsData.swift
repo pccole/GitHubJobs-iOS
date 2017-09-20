@@ -18,6 +18,7 @@ class JobData {
 	private var longitude:Double?
 	private var fullTime = true
 	private var page = 1
+	private var data:[[String:Any]] = []
 	
 	private init() { }
 	
@@ -86,6 +87,13 @@ class JobData {
 	}
 	
 	private func jobData(params:[String:Any], completion:Completion) {
-		Api.instance.getJobs(params: params, completion: completion)
+		Api.instance.getJobs(params: params) { (json:[[String : Any]]?) in
+			guard let j = json else {
+				completion?(nil)
+				return
+			}
+			self.data = j
+			completion?(j)
+		}
 	}
 }

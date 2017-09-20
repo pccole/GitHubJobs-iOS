@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-typealias Completion = (([[String:Any]]) -> Void)?
+typealias Completion = (([[String:Any]]?) -> Void)?
 
 class Api {
 	static let instance = Api()
