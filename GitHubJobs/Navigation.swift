@@ -18,6 +18,7 @@ class Navigation {
 	
 	private lazy var nav: UINavigationController = {
 		let controller = UINavigationController(rootViewController: SearchViewController())
+		controller.navigationBar.isTranslucent = false
 		return controller
 	}()
 	

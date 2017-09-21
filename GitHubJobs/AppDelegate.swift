@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 	
 	func applyApperance() {
-		UINavigationBar.appearance().barTintColor = UIColor.black
+		UINavigationBar.appearance().barTintColor = Color.grayDark
 		UINavigationBar.appearance().tintColor = UIColor.white
 		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
 		UIApplication.shared.statusBarStyle = .lightContent

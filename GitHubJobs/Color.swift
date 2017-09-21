@@ -24,4 +24,8 @@ class Color {
 	static let gray = UIColor(hex: 0x767676)
 	
 	static let grayDark = UIColor(hex: 0x333333)
+	
+	static let black = UIColor(hex: 0x2A2D32)
+	
+	static let whiteGray = UIColor(hex: 0xC7C8C9)
 }
