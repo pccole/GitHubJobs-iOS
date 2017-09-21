@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import CoreLocation
+
+class Location {
+	
+	private let locationManager = CLLocationManager()
+	
+	func getCurrentLocation() {
+		switch CLLocationManager.authorizationStatus() {
+		case .notDetermined, .restricted, .denied:
+			break
+		case .authorizedAlways, .authorizedWhenInUse:
+			break
+		}
+	}
+}

@@ -12,6 +12,7 @@
 		942021621F70B62B00FDFB42 /* JobsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021611F70B62B00FDFB42 /* JobsData.swift */; };
 		942021661F71FDDE00FDFB42 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021641F71FDDE00FDFB42 /* JobsViewController.swift */; };
 		942021671F71FDDE00FDFB42 /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942021651F71FDDE00FDFB42 /* JobsViewController.xib */; };
+		942A89781F73350E0095C997 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942A89771F73350E0095C997 /* Location.swift */; };
 		942CAA7D1F6A0F9400C3EA74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CAA7C1F6A0F9400C3EA74 /* AppDelegate.swift */; };
 		942CAA841F6A0F9400C3EA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942CAA831F6A0F9400C3EA74 /* Assets.xcassets */; };
 		942CAA871F6A0F9400C3EA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942CAA851F6A0F9400C3EA74 /* LaunchScreen.storyboard */; };
@@ -55,6 +56,7 @@
 		942021611F70B62B00FDFB42 /* JobsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsData.swift; sourceTree = "<group>"; };
 		942021641F71FDDE00FDFB42 /* JobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		942021651F71FDDE00FDFB42 /* JobsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
+		942A89771F73350E0095C997 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		942CAA791F6A0F9400C3EA74 /* GitHubJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942CAA7C1F6A0F9400C3EA74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		942CAA831F6A0F9400C3EA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				942CAA7C1F6A0F9400C3EA74 /* AppDelegate.swift */,
+				942A89771F73350E0095C997 /* Location.swift */,
 				94EE7F591F6F15B400972967 /* Utility */,
 				94EE7F531F6EDCF500972967 /* Extensions */,
 				942021601F70B60200FDFB42 /* Data */,
@@ -563,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94EE7F481F6E3D6C00972967 /* Navigation.swift in Sources */,
+				942A89781F73350E0095C997 /* Location.swift in Sources */,
 				94EE7F581F6F158900972967 /* UIColorExtensions.swift in Sources */,
 				94EE7F421F6E2C0200972967 /* SearchViewController.swift in Sources */,
 				942CAA7D1F6A0F9400C3EA74 /* AppDelegate.swift in Sources */,
