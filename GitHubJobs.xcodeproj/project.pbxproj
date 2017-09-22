@@ -18,6 +18,7 @@
 		942CAA871F6A0F9400C3EA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942CAA851F6A0F9400C3EA74 /* LaunchScreen.storyboard */; };
 		942CAA921F6A0F9400C3EA74 /* GitHubJobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CAA911F6A0F9400C3EA74 /* GitHubJobsTests.swift */; };
 		942CAA9D1F6A0F9400C3EA74 /* GitHubJobsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942CAA9C1F6A0F9400C3EA74 /* GitHubJobsUITests.swift */; };
+		94A6563E1F74B697008899B4 /* JobSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A6563D1F74B697008899B4 /* JobSearch.swift */; };
 		94EE7F421F6E2C0200972967 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE7F401F6E2C0200972967 /* SearchViewController.swift */; };
 		94EE7F431F6E2C0200972967 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94EE7F411F6E2C0200972967 /* SearchViewController.xib */; };
 		94EE7F481F6E3D6C00972967 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE7F471F6E3D6C00972967 /* Navigation.swift */; };
@@ -68,6 +69,7 @@
 		942CAA981F6A0F9400C3EA74 /* GitHubJobsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubJobsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		942CAA9C1F6A0F9400C3EA74 /* GitHubJobsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubJobsUITests.swift; sourceTree = "<group>"; };
 		942CAA9E1F6A0F9400C3EA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94A6563D1F74B697008899B4 /* JobSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobSearch.swift; sourceTree = "<group>"; };
 		94EE7F401F6E2C0200972967 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		94EE7F411F6E2C0200972967 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		94EE7F471F6E3D6C00972967 /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				94EE7F4B1F6ECB5E00972967 /* Job.swift */,
+				94A6563D1F74B697008899B4 /* JobSearch.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -340,23 +343,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Phil Cole";
 				TargetAttributes = {
 					942CAA781F6A0F9400C3EA74 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = LZX69D2T2M;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					942CAA8C1F6A0F9400C3EA74 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = LZX69D2T2M;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 942CAA781F6A0F9400C3EA74;
 					};
 					942CAA971F6A0F9400C3EA74 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = LZX69D2T2M;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 942CAA781F6A0F9400C3EA74;
 					};
@@ -574,6 +580,7 @@
 				94EE7F521F6ED36600972967 /* Api.swift in Sources */,
 				94EE7F5B1F6F1DAE00972967 /* Color.swift in Sources */,
 				94EE7F551F6EDD0800972967 /* UIViewExtensions.swift in Sources */,
+				94A6563E1F74B697008899B4 /* JobSearch.swift in Sources */,
 				942021661F71FDDE00FDFB42 /* JobsViewController.swift in Sources */,
 				94EE7F4C1F6ECB5E00972967 /* Job.swift in Sources */,
 			);
@@ -632,7 +639,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -640,7 +649,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -683,7 +696,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -691,7 +706,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -727,7 +746,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philcole.GitHubJobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -741,7 +761,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philcole.GitHubJobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -756,7 +777,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philcole.GitHubJobsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubJobs.app/GitHubJobs";
 			};
 			name = Debug;
@@ -772,7 +794,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philcole.GitHubJobsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubJobs.app/GitHubJobs";
 			};
 			name = Release;
@@ -787,7 +810,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philcole.GitHubJobsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = GitHubJobs;
 			};
 			name = Debug;
@@ -802,7 +826,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = philcole.GitHubJobsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = GitHubJobs;
 			};
 			name = Release;
