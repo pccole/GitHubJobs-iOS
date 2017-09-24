@@ -17,6 +17,7 @@ class Location: NSObject, CLLocationManagerDelegate {
 	var currentLocation:CLLocation?
 	
 	private override init() {
+		super.init()
 		locationManager.delegate = self
 	}
 	
