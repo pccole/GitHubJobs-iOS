@@ -12,76 +12,27 @@ class JobData {
 	
 	static let instance = JobData()
 	
-	private var description = ""
-	private var location:String?
-	private var latitude:Double?
-	private var longitude:Double?
-	private var fullTime = true
+	private var searchData:JobSearch?
 	private var page = 1
 	private var data = [[String:Any]]()
 	
 	private init() { }
 	
-	func getJobs(description:String, location:String, fullTime:Bool, completion:Completion) {
-		guard self.description != description,
-			let loc = self.location,
-			loc != location,
-			self.fullTime != fullTime else {
+	func getJobs(data:JobSearch, completion:Completion) {
+		searchData = data
+		guard let params = data.parameters else {
 			return
 		}
-		self.description = description
-		self.location = location
-		self.fullTime = fullTime
-		self.longitude = nil
-		self.latitude = nil
-		let params:[String:Any] = ["description": description,
-		                           "location": location,
-		                           "full_time": fullTime]
-		jobData(params: params, completion: completion)
-	}
-	
-	func getJobs(description:String, lat:Double, long:Double, fullTime:Bool, completion:Completion) {
-		guard self.description != description,
-			let _lat = self.latitude,
-			_lat != lat,
-			let _long = self.longitude,
-			_long != long,
-			self.fullTime != fullTime else {
-			return
-		}
-			
-		self.description = description
-		self.latitude = lat
-		self.longitude = long
-		self.fullTime = fullTime
-		self.location = nil
-		let params:[String:Any] = ["description": description,
-		                           "lat": lat,
-		                           "long": long,
-		                           "full_time": fullTime]
 		jobData(params: params, completion: completion)
 	}
 	
 	func nextPage(completion:Completion) {
 		page += 1
-		guard let loc = location else {
-			guard let lat = latitude, let long = longitude else {
-				return
-			}
-			let params:[String:Any] = ["description": description,
-			                           "lat": lat,
-			                           "long": long,
-			                           "full_time": fullTime,
-			                           "page":page]
-			jobData(params: params, completion: completion)
+		guard var search = searchData?.parameters else {
 			return
-			
 		}
-		let params:[String:Any] = ["description": description,
-		                           "location": loc,
-		                           "full_time": fullTime,
-		                           "page":page]
-		jobData(params: params, completion: completion)
+		search["page"] = page
+		jobData(params: search, completion: completion)
 	}
 	
 	private func jobData(params:[String:Any], completion:Completion) {
