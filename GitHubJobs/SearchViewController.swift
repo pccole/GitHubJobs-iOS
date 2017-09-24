@@ -26,6 +26,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		title = "Search Jobs"
+		Location.instance.delegate = self
 		style()
 		addTapGestures()
 		navigationItem.rightBarButtonItem = searchBarButtonItem
@@ -58,6 +59,11 @@ class SearchViewController: UIViewController {
 		fullTimeContainerView.layer.cornerRadius = 5
 	}
 	
+	private func setKeyboardReturnType() {
+		locationTextField.returnKeyType = .search
+		languageTextField.returnKeyType = .search
+	}
+	
 	private func addTapGestures() {
 		addDismissKeyboardTapGesture()
 		addFullTimeFieldTapGesture()
@@ -82,7 +88,7 @@ class SearchViewController: UIViewController {
 	}
 	
 	@IBAction func useCurrentLocationTapped(_ sender: UIButton) {
-
+		Location.instance.getCurrentLocation()
 	}
 	
 	@objc private func search() {
@@ -90,8 +96,16 @@ class SearchViewController: UIViewController {
 			language.count > 0,
 			let location = locationTextField.text,
 			location.count > 0 else {
+			let alert = UIAlertController(title: "Error", message: "Please fill in Language or Location", preferredStyle: .alert)
+			Navigation.instance.present(alert)
 			return
 		}
 		
+	}
+}
+
+extension SearchViewController: LocationDelegate {
+	func new(_ location: String) {
+		locationTextField.text = location
 	}
 }
