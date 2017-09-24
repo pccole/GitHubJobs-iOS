@@ -10,11 +10,21 @@ import Foundation
 import CoreLocation
 import MapKit
 
+protocol LocationDelegate {
+	func new(_ location:String)
+}
+
 class Location: NSObject, CLLocationManagerDelegate {
 	
 	static let instance = Location()
-	private let locationManager = CLLocationManager()
+	private lazy var locationManager: CLLocationManager = {
+		let manager = CLLocationManager()
+		manager.delegate = self
+		return manager
+	}()
+	private let geoCoder:CLGeocoder = CLGeocoder()
 	var currentLocation:CLLocation?
+	var delegate:LocationDelegate?
 	
 	private override init() {
 		super.init()
@@ -32,5 +42,15 @@ class Location: NSObject, CLLocationManagerDelegate {
 	
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 		currentLocation = locations.first
+		guard let location = currentLocation else { return }
+		manager.stopUpdatingLocation()
+		geoCoder.reverseGeocodeLocation(location) { (placemark:[CLPlacemark]?, error:Error?) in
+			guard let mark = placemark?.first,
+				let dict = mark.addressDictionary,
+				let city = dict["City"] as? String else {
+					return
+			}
+			self.delegate?.new(city)
+		}
 	}
 }
