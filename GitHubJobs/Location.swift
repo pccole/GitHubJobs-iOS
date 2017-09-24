@@ -8,17 +8,28 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
-class Location {
+class Location: NSObject, CLLocationManagerDelegate {
 	
+	static let instance = Location()
 	private let locationManager = CLLocationManager()
+	var currentLocation:CLLocation?
+	
+	private override init() {
+		locationManager.delegate = self
+	}
 	
 	func getCurrentLocation() {
 		switch CLLocationManager.authorizationStatus() {
 		case .notDetermined, .restricted, .denied:
-			break
+			locationManager.requestWhenInUseAuthorization()
 		case .authorizedAlways, .authorizedWhenInUse:
-			break
+			locationManager.requestLocation()
 		}
+	}
+	
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		currentLocation = locations.first
 	}
 }
