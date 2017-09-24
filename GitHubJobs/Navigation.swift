@@ -24,4 +24,11 @@ class Navigation {
 	
 	private init() { }
 	
+	func present(_ controller:UIViewController, animated:Bool = true, completion:(() -> Void)? = nil) {
+		nav.present(controller, animated: animated, completion: completion)
+	}
+	
+	func push(_ controller:UIViewController, animated:Bool = true) {
+		nav.pushViewController(controller, animated: animated)
+	}
 }
