@@ -10,6 +10,11 @@ import UIKit
 
 class SearchViewController: UIViewController {
 	
+	private lazy var searchBarButtonItem: UIBarButtonItem = {
+		let item = UIBarButtonItem(title: "Search", style: UIBarButtonItemStyle.done, target: self, action: #selector(self.search))
+		return item
+	}()
+	
 	@IBOutlet weak var currentLocationButton: UIButton!
 	@IBOutlet weak var locationTextField: UITextField!
 	@IBOutlet weak var fullTimeSwitch: UISwitch!
@@ -22,7 +27,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 		title = "Search Jobs"
 		style()
-		addDismissKeyboardTapGesture()
+		addTapGestures()
+		navigationItem.rightBarButtonItem = searchBarButtonItem
 	}
 	
 	private func style() {
@@ -52,6 +58,11 @@ class SearchViewController: UIViewController {
 		fullTimeContainerView.layer.cornerRadius = 5
 	}
 	
+	private func addTapGestures() {
+		addDismissKeyboardTapGesture()
+		addFullTimeFieldTapGesture()
+	}
+	
 	private func addDismissKeyboardTapGesture() {
 		let tap = UITapGestureRecognizer(target: self, action: #selector(endEditing))
 		view.addGestureRecognizer(tap)
@@ -63,15 +74,24 @@ class SearchViewController: UIViewController {
 	
 	private func addFullTimeFieldTapGesture() {
 		let tap = UITapGestureRecognizer(target: self, action: #selector(fullTimeFieldTapped))
-		view.addGestureRecognizer(tap)
+		fullTimeContainerView.addGestureRecognizer(tap)
 	}
 	
 	@objc private func fullTimeFieldTapped() {
-		fullTimeSwitch.isOn = !fullTimeSwitch.isOn
+		fullTimeSwitch.setOn(!fullTimeSwitch.isOn, animated: true)
 	}
 	
 	@IBAction func useCurrentLocationTapped(_ sender: UIButton) {
-		
+
 	}
 	
+	@objc private func search() {
+		guard let language = languageTextField.text,
+			language.count > 0,
+			let location = locationTextField.text,
+			location.count > 0 else {
+			return
+		}
+		
+	}
 }
