@@ -14,7 +14,7 @@ class JobData {
 	
 	private var searchData:JobSearch?
 	private var page = 1
-	private var data = [[String:Any]]()
+	private var jobs = [Job]()
 	
 	private init() { }
 	
