@@ -18,4 +18,13 @@ extension UIView {
 		sv.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 		sv.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 	}
+	
+	func pinToSuperview(inset: CGFloat) {
+		guard let superview  = superview else { return }
+		translatesAutoresizingMaskIntoConstraints = false
+		superview.topAnchor.constraint(equalTo: topAnchor, constant: -inset).isActive = true
+		superview.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -inset).isActive = true
+		superview.trailingAnchor.constraint(equalTo: trailingAnchor, constant: inset).isActive = true
+		superview.bottomAnchor.constraint(equalTo: bottomAnchor, constant: inset).isActive = true
+	}
 }
