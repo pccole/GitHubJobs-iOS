@@ -66,7 +66,9 @@ class JobsViewController: UIViewController {
 
 extension JobsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
+		let job = jobs[indexPath.row]
+		let jobVC = JobViewController(job: job)
+		Navigation.instance.push(jobVC)
 	}
 }
 
