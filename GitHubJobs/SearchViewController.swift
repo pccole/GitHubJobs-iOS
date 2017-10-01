@@ -20,12 +20,12 @@ class SearchViewController: UIViewController {
 	@IBOutlet weak var fullTimeSwitch: UISwitch!
 	@IBOutlet weak var fullTimeLabel: UILabel!
 	@IBOutlet weak var fullTimeContainerView: UIView!
-	@IBOutlet weak var languageTextField: UITextField!
+	@IBOutlet weak var descriptionTextField: UITextField!
 	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		title = "Search Jobs"
+		title = "GitHub Jobs"
 		Location.instance.delegate = self
 		style()
 		addTapGestures()
@@ -36,11 +36,11 @@ class SearchViewController: UIViewController {
 		view.backgroundColor = Color.grayLight
 		styleFullTimeField()
 		styleCurrentLocationField()
-		styleLanguageAndLocationTextColor()
+		styledescriptionAndLocationTextColor()
 	}
 	
-	private func styleLanguageAndLocationTextColor() {
-		languageTextField.textColor = Color.blue
+	private func styledescriptionAndLocationTextColor() {
+		descriptionTextField.textColor = Color.blue
 		locationTextField.textColor = Color.blue
 	}
 	
@@ -61,7 +61,7 @@ class SearchViewController: UIViewController {
 	
 	private func setKeyboardReturnType() {
 		locationTextField.returnKeyType = .search
-		languageTextField.returnKeyType = .search
+		descriptionTextField.returnKeyType = .search
 	}
 	
 	private func addTapGestures() {
@@ -92,18 +92,27 @@ class SearchViewController: UIViewController {
 	}
 	
 	@objc private func search() {
-		guard let language = languageTextField.text,
-			language.count > 0,
+		guard let description = descriptionTextField.text,
+			description.count > 0,
 			let location = locationTextField.text,
 			location.count > 0 else {
-			let alert = UIAlertController(title: "Error", message: "Please fill in Language or Location", preferredStyle: .alert)
-			Navigation.instance.present(alert)
-			return
+				let alert = UIAlertController(title: "Error", message: "Please fill in Description or Location", preferredStyle: .alert)
+				let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+				alert.addAction(okAction)
+				Navigation.instance.present(alert)
+				return
 		}
-		let search = JobSearch(description: language, location: location, latitude: nil, longitude: nil)
+		let search = JobSearch(description: description, location: location, latitude: nil, longitude: nil, fullTime: fullTimeSwitch.isOn)
 		JobData.instance.getJobs(data: search) { (jobs:[Job]?) in
-			guard let jobs = jobs else { return }
-			print(jobs)
+			guard let jobs = jobs else {
+				let alert = UIAlertController(title: "No Jobs Found", message: nil, preferredStyle: .alert)
+				let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+				alert.addAction(okAction)
+				Navigation.instance.present(alert)
+				return
+			}
+			let jobVC = JobsViewController(jobs: jobs)
+			Navigation.instance.push(jobVC)
 		}
 	}
 }

@@ -13,10 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="GitHubJobs" customModuleProvider="target">
             <connections>
                 <outlet property="currentLocationButton" destination="K4A-y3-dJK" id="7Qn-sJ-75i"/>
+                <outlet property="descriptionTextField" destination="OzR-Tx-QKP" id="5ch-3I-efM"/>
                 <outlet property="fullTimeContainerView" destination="zWg-Gl-OLR" id="vHm-8B-kv8"/>
                 <outlet property="fullTimeLabel" destination="YfM-Uz-KlV" id="Zk2-WF-i33"/>
                 <outlet property="fullTimeSwitch" destination="j9I-Ov-OXL" id="93a-lp-LqD"/>
-                <outlet property="languageTextField" destination="OzR-Tx-QKP" id="J7T-b1-mQQ"/>
                 <outlet property="locationTextField" destination="nLS-I2-ccm" id="IAn-Gp-WfB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -29,7 +29,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-pY-FXf">
                     <rect key="frame" x="16" y="30" width="343" height="200"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by language" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OzR-Tx-QKP">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OzR-Tx-QKP">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="TrN-kl-GO3"/>
