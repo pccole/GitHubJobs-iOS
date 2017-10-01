@@ -13,13 +13,13 @@ struct JobSearch {
 	let location:String?
 	let latitude:Double?
 	let longitude:Double?
-	let fullTime = true
+	let fullTime:Bool
 	
 	var parameters: [String: Any]? {
 		if let location = location {
 			let parameters:[String:Any] = ["location":location,
 			                  "description":description,
-			                  "full_time":fullTime]
+			                  "full_time":fullTime.description]
 			return parameters
 		} else if let latitude = latitude, let longitude = longitude {
 			let parameters:[String:Any] = ["latitude":latitude,
