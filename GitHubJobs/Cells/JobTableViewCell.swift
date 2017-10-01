@@ -59,7 +59,7 @@ class JobTableViewCell: UITableViewCell {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		accessoryView = companyLogoImageView
 		contentView.addSubview(stackView)
-		stackView.pinToSuperview()
+		stackView.pinToSuperview(inset: 15)
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
