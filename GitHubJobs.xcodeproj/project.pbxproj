@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00726D01152ABF08DEEDDC15 /* Pods_GitHubJobsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656AF8B53A4606A262721163 /* Pods_GitHubJobsTests.framework */; };
 		8F44BC49F74BB681FED8465D /* Pods_GitHubJobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2CEFD8672C0D6F9AF035A7 /* Pods_GitHubJobs.framework */; };
+		941CFF961F80AC7300197DAC /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941CFF951F80AC7300197DAC /* JobTableViewCell.swift */; };
 		942021621F70B62B00FDFB42 /* JobsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021611F70B62B00FDFB42 /* JobsData.swift */; };
 		942021661F71FDDE00FDFB42 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021641F71FDDE00FDFB42 /* JobsViewController.swift */; };
 		942021671F71FDDE00FDFB42 /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942021651F71FDDE00FDFB42 /* JobsViewController.xib */; };
@@ -54,6 +55,7 @@
 		784C8D2132B3E365BC5D06EE /* Pods-GitHubJobsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubJobsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubJobsUITests/Pods-GitHubJobsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8826D531FF40CAD1F1CF8276 /* Pods-GitHubJobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubJobs.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubJobs/Pods-GitHubJobs.release.xcconfig"; sourceTree = "<group>"; };
 		8F2CEFD8672C0D6F9AF035A7 /* Pods_GitHubJobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubJobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		941CFF951F80AC7300197DAC /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		942021611F70B62B00FDFB42 /* JobsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsData.swift; sourceTree = "<group>"; };
 		942021641F71FDDE00FDFB42 /* JobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		942021651F71FDDE00FDFB42 /* JobsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
@@ -134,6 +136,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		941CFF931F80ABFC00197DAC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				941CFF951F80AC7300197DAC /* JobTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		941CFF941F80AC2300197DAC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				942021631F71FDB200FDFB42 /* JobsViewController */,
+				94EE7F441F6E2C0900972967 /* SearchViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		942021601F70B60200FDFB42 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +168,7 @@
 				942021651F71FDDE00FDFB42 /* JobsViewController.xib */,
 			);
 			name = JobsViewController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		942CAA701F6A0F9400C3EA74 = {
@@ -184,8 +204,8 @@
 				94EE7F4A1F6ECA5D00972967 /* Models */,
 				94EE7F491F6ECA4800972967 /* Webservice */,
 				94EE7F461F6E3D4B00972967 /* Navigation */,
-				942021631F71FDB200FDFB42 /* JobsViewController */,
-				94EE7F441F6E2C0900972967 /* SearchViewController */,
+				941CFF931F80ABFC00197DAC /* Cells */,
+				941CFF941F80AC2300197DAC /* ViewControllers */,
 				94EE7F451F6E3D3700972967 /* Support Files */,
 			);
 			path = GitHubJobs;
@@ -216,6 +236,7 @@
 				94EE7F411F6E2C0200972967 /* SearchViewController.xib */,
 			);
 			name = SearchViewController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		94EE7F451F6E3D3700972967 /* Support Files */ = {
@@ -578,6 +599,7 @@
 				942CAA7D1F6A0F9400C3EA74 /* AppDelegate.swift in Sources */,
 				942021621F70B62B00FDFB42 /* JobsData.swift in Sources */,
 				94EE7F521F6ED36600972967 /* Api.swift in Sources */,
+				941CFF961F80AC7300197DAC /* JobTableViewCell.swift in Sources */,
 				94EE7F5B1F6F1DAE00972967 /* Color.swift in Sources */,
 				94EE7F551F6EDD0800972967 /* UIViewExtensions.swift in Sources */,
 				94A6563E1F74B697008899B4 /* JobSearch.swift in Sources */,
