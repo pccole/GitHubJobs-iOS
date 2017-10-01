@@ -8,6 +8,7 @@ target 'GitHubJobs' do
   # Pods for GitHubJobs
 
 pod 'Alamofire'
+pod 'AlamofireImage'
 
   target 'GitHubJobsTests' do
     inherit! :search_paths
