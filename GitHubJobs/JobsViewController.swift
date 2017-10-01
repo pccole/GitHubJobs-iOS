@@ -66,7 +66,7 @@ class JobsViewController: UIViewController {
 
 extension JobsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		//
+		
 	}
 }
 
