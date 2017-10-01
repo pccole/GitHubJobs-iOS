@@ -21,4 +21,18 @@ struct Job: Codable {
 	let company_url:String?
 	let company_logo:String?
 	let url:String
+	
+	init() {
+		id = ""
+		created_at = ""
+		title = ""
+		location = ""
+		type = ""
+		description = ""
+		how_to_apply = ""
+		company = ""
+		company_url = ""
+		company_logo = ""
+		url = ""
+	}
 }
