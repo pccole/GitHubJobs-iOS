@@ -76,7 +76,10 @@ class JobTableViewCell: UITableViewCell {
     }
 	
 	private func populateInformation(with job:Job) {
-		
+		titleLabel.text = job.title
+		locationLabel.text = job.location
+		fullTimeLabel.text = job.type
+		postedLabel.text = job.created_at
 	}
 
 }
