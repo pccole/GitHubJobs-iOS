@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="GitHubJobs" customModuleProvider="target">
+            <connections>
+                <outlet property="currentLocationButton" destination="K4A-y3-dJK" id="7Qn-sJ-75i"/>
+                <outlet property="fullTimeContainerView" destination="zWg-Gl-OLR" id="vHm-8B-kv8"/>
+                <outlet property="fullTimeLabel" destination="YfM-Uz-KlV" id="Zk2-WF-i33"/>
+                <outlet property="fullTimeSwitch" destination="j9I-Ov-OXL" id="93a-lp-LqD"/>
+                <outlet property="languageTextField" destination="OzR-Tx-QKP" id="J7T-b1-mQQ"/>
+                <outlet property="locationTextField" destination="nLS-I2-ccm" id="IAn-Gp-WfB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-pY-FXf">
+                    <rect key="frame" x="16" y="30" width="343" height="200"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by language" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="OzR-Tx-QKP">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="TrN-kl-GO3"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLS-I2-ccm">
+                            <rect key="frame" x="0.0" y="55" width="343" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="tzI-AD-xeq"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4A-y3-dJK">
+                            <rect key="frame" x="0.0" y="110" width="343" height="35"/>
+                            <color key="backgroundColor" red="0.79525351519999998" green="0.79525351519999998" blue="0.79525351519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="HTR-jd-sh3"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="280" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Use Current Location" image="MyLocationIcon"/>
+                            <connections>
+                                <action selector="useCurrentLocationTapped:" destination="-1" eventType="touchUpInside" id="w55-DJ-75U"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWg-Gl-OLR">
+                            <rect key="frame" x="0.0" y="165" width="343" height="35"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DtA-0B-rLT">
+                                    <rect key="frame" x="5" y="0.0" width="333" height="35"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full-time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfM-Uz-KlV">
+                                            <rect key="frame" x="0.0" y="7.5" width="284" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j9I-Ov-OXL">
+                                            <rect key="frame" x="284" y="2" width="51" height="31"/>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="Bbt-7t-T5q"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="DtA-0B-rLT" secondAttribute="bottom" id="0G8-q2-hfw"/>
+                                <constraint firstAttribute="trailing" secondItem="DtA-0B-rLT" secondAttribute="trailing" constant="5" id="0yj-Aq-ixe"/>
+                                <constraint firstItem="DtA-0B-rLT" firstAttribute="top" secondItem="zWg-Gl-OLR" secondAttribute="top" id="MPA-e8-uLF"/>
+                                <constraint firstItem="DtA-0B-rLT" firstAttribute="leading" secondItem="zWg-Gl-OLR" secondAttribute="leading" constant="5" id="uRf-qA-Do0"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ScM-pY-FXf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="10" id="6s4-d5-W3k"/>
+                <constraint firstItem="ScM-pY-FXf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="Alc-o6-0NF"/>
+                <constraint firstAttribute="trailingMargin" secondItem="ScM-pY-FXf" secondAttribute="trailing" id="E3d-mk-bkf"/>
+            </constraints>
+            <point key="canvasLocation" x="30" y="44"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MyLocationIcon" width="15" height="20"/>
+    </resources>
+</document>
