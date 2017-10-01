@@ -53,9 +53,10 @@ class JobData {
 				self.jobs.append(contentsOf: jobs)
 			} catch {
 				print(error)
+				completion?(nil)
 			}
 			print(self.jobs)
-			completion?(self.jobs)
+			self.jobs.count > 0 ? completion?(self.jobs) : completion?(nil)
 		}
 	}
 }
