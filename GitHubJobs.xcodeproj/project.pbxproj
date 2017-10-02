@@ -12,6 +12,7 @@
 		941CFF961F80AC7300197DAC /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941CFF951F80AC7300197DAC /* JobTableViewCell.swift */; };
 		941CFF9A1F81A93A00197DAC /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941CFF981F81A93900197DAC /* JobViewController.swift */; };
 		941CFF9B1F81A93A00197DAC /* JobViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941CFF991F81A93900197DAC /* JobViewController.xib */; };
+		941CFF9D1F81BD7900197DAC /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941CFF9C1F81BD7900197DAC /* StringExtensions.swift */; };
 		942021621F70B62B00FDFB42 /* JobsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021611F70B62B00FDFB42 /* JobsData.swift */; };
 		942021661F71FDDE00FDFB42 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942021641F71FDDE00FDFB42 /* JobsViewController.swift */; };
 		942021671F71FDDE00FDFB42 /* JobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942021651F71FDDE00FDFB42 /* JobsViewController.xib */; };
@@ -60,6 +61,7 @@
 		941CFF951F80AC7300197DAC /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
 		941CFF981F81A93900197DAC /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		941CFF991F81A93900197DAC /* JobViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobViewController.xib; sourceTree = "<group>"; };
+		941CFF9C1F81BD7900197DAC /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		942021611F70B62B00FDFB42 /* JobsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsData.swift; sourceTree = "<group>"; };
 		942021641F71FDDE00FDFB42 /* JobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		942021651F71FDDE00FDFB42 /* JobsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JobsViewController.xib; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			children = (
 				94EE7F541F6EDD0800972967 /* UIViewExtensions.swift */,
 				94EE7F571F6F158900972967 /* UIColorExtensions.swift */,
+				941CFF9C1F81BD7900197DAC /* StringExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				94EE7F5B1F6F1DAE00972967 /* Color.swift in Sources */,
 				94EE7F551F6EDD0800972967 /* UIViewExtensions.swift in Sources */,
 				94A6563E1F74B697008899B4 /* JobSearch.swift in Sources */,
+				941CFF9D1F81BD7900197DAC /* StringExtensions.swift in Sources */,
 				942021661F71FDDE00FDFB42 /* JobsViewController.swift in Sources */,
 				94EE7F4C1F6ECB5E00972967 /* Job.swift in Sources */,
 			);
