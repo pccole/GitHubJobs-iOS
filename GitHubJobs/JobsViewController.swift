@@ -31,6 +31,7 @@ class JobsViewController: UIViewController {
 		t.register(JobTableViewCell.self, forCellReuseIdentifier: JobTableViewCell.description())
 		t.delegate = self
 		t.dataSource = self
+		t.tableFooterView = UIView(frame: CGRect.zero)
 		return t
 	}()
 	
@@ -78,6 +79,7 @@ extension JobsViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		tableView.deselectRow(at: indexPath, animated: true)
 		let cell = tableView.dequeueReusableCell(withIdentifier: JobTableViewCell.description(), for: indexPath) as! JobTableViewCell
 		cell.job = jobs[indexPath.row]
 		return cell
