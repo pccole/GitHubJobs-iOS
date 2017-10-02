@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class JobTableViewCell: UITableViewCell {
 
@@ -52,12 +53,15 @@ class JobTableViewCell: UITableViewCell {
 	
 	private lazy var companyLogoImageView: UIImageView = {
 		let imageView = UIImageView()
+		imageView.translatesAutoresizingMaskIntoConstraints = false
+		imageView.contentMode = .scaleAspectFit
 		return imageView
 	}()
 	
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
-		accessoryView = companyLogoImageView
+		contentView.addSubview(companyLogoImageView)
+		companyLogoImageView.pinToSuperview(inset: 25)
 		contentView.addSubview(stackView)
 		stackView.pinToSuperview(inset: 15)
 	}
@@ -80,6 +84,8 @@ class JobTableViewCell: UITableViewCell {
 		locationLabel.text = job.location
 		fullTimeLabel.text = job.type
 		postedLabel.text = job.created_at
+		guard let logo = job.company_logo, let logoURL = URL(string: logo) else { return }
+		companyLogoImageView.af_setImage(withURL: logoURL)
 	}
 
 }
