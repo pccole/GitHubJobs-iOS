@@ -14,11 +14,8 @@ extension String {
 			return nil
 		}
 		do {
-			let string = try NSAttributedString(data: data,
-			                                 options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
-			                                           NSAttributedString.DocumentReadingOptionKey.characterEncoding:String.Encoding.utf8],
-			                                 documentAttributes: nil)
-			let string = try NSAttributedString(data: <#T##Data#>, options: <#T##[NSAttributedString.DocumentReadingOptionKey : Any]#>, documentAttributes: <#T##AutoreleasingUnsafeMutablePointer<NSDictionary?>?#>)
+			let options = [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html]
+			let string = try NSAttributedString(data: data, options: options, documentAttributes: nil)
 			return string
 		} catch {
 			print(error)

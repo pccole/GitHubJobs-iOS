@@ -10,6 +10,54 @@ import UIKit
 
 class JobViewController: UIViewController {
 
+	private let scrollView: UIScrollView = {
+		let scroll = UIScrollView()
+		scroll.translatesAutoresizingMaskIntoConstraints = false
+		scroll.showsHorizontalScrollIndicator = false
+		return scroll
+	}()
+	
+	private lazy var titleLabel: UILabel = {
+		let label = UILabel()
+		label.translatesAutoresizingMaskIntoConstraints = false
+		return label
+	}()
+	
+	private lazy var locationLabel: UILabel = {
+		let label = UILabel()
+		label.translatesAutoresizingMaskIntoConstraints = false
+		return label
+	}()
+	
+	private lazy var postedLabel: UILabel = {
+		let label = UILabel()
+		label.translatesAutoresizingMaskIntoConstraints = false
+		return label
+	}()
+	
+	private lazy var descriptionTextView: UITextView = {
+		let textView = UITextView()
+		textView.translatesAutoresizingMaskIntoConstraints = false
+		textView.isScrollEnabled = false
+		return textView
+	}()
+	
+	private lazy var stackView: UIStackView = {
+		let stack = UIStackView(arrangedSubviews: [titleLabel, locationLabel, postedLabel, descriptionTextView])
+		stack.translatesAutoresizingMaskIntoConstraints = false
+		stack.axis = .vertical
+		return stack
+	}()
+	
+	private lazy var stackViewConstraints: [NSLayoutConstraint] = {
+		return [
+			self.stackView.topAnchor.constraint(equalTo: self.scrollView.topAnchor, constant: 15),
+			self.stackView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor, constant: 15),
+			self.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 15),
+			self.stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -15)
+		]
+	}()
+	
 	private let job:Job
 	
 	init(job:Job) {
@@ -28,7 +76,13 @@ class JobViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		view.addSubview(scrollView)
+		scrollView.pinToSuperview()
+		scrollView.addSubview(stackView)
+		NSLayoutConstraint.activate(stackViewConstraints)
+		titleLabel.text = job.title
+		locationLabel.text = job.location
+		postedLabel.text = job.created_at
+		descriptionTextView.attributedText = job.description.attributedString
     }
-	
-	
 }
