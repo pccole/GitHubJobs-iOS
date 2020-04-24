@@ -18,21 +18,44 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
+        
+        
+        
+        // Use a UIHostingController as window root view controller.
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            let nav = setupHostingController()
+            window.rootViewController = nav
+            self.window = window
+            window.makeKeyAndVisible()
+        }
+    }
+    
+    func setupHostingController() -> UINavigationController {
+        let contentView = rootView()
+        let hosting = UIHostingController(rootView: contentView)
+        let nav = UINavigationController(rootViewController: hosting)
+        nav.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        nav.navigationBar.barTintColor = .clear
+        nav.navigationBar.backgroundColor = UIColor.black
+        nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        nav.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        nav.navigationBar.prefersLargeTitles = true
+        return nav
+    }
+    
+    func rootView() -> some View {
         // Get the managed object context from the shared persistent container.
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ContentView().environment(\.managedObjectContext, context)
-
-        // Use a UIHostingController as window root view controller.
-        if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
-        }
+        let viewModel = JobViewModel()
+        viewModel.getJobs()
+        let contentView = JobListView()
+                            .environment(\.managedObjectContext, context)
+                            .environmentObject(viewModel)
+        return contentView
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

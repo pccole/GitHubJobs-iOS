@@ -8,16 +8,18 @@
 
 import Foundation
 
-struct GithubJob: Codable {
-    let id: String
-    let type: String
-    @URLValue var url: URL
-    let createdAt: String
-    let company: String
-    @URLValue var companyURL: URL
+public struct GithubJob: Codable {
+    public let id: String
+    public let type: String
+    @URLValue public var url: URL
+    public let createdAt: String
+    public let company: String
+    @OptionalURLValue public var companyUrl: URL?
     let location: String
     let title: String
     let description: String
     let howToApply: String
-    let companyLogo: String
+    @OptionalURLValue public var companyLogo: URL?
 }
+
+extension GithubJob: Identifiable { }
