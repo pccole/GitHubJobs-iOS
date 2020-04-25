@@ -8,14 +8,12 @@
 
 import SwiftUI
 
-struct HostingController: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class HostingController<Content: View>: UIHostingController<Content> {
+    override init(rootView: Content) {
+        super.init(rootView: rootView)
     }
-}
-
-struct HostingController_Previews: PreviewProvider {
-    static var previews: some View {
-        HostingController()
+    
+    @objc required dynamic init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

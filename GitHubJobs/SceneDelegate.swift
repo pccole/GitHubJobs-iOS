@@ -33,14 +33,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func setupHostingController() -> UINavigationController {
         let contentView = rootView()
-        let hosting = UIHostingController(rootView: contentView)
-        let nav = UINavigationController(rootViewController: hosting)
-        nav.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        nav.navigationBar.barTintColor = .clear
-        nav.navigationBar.backgroundColor = UIColor.black
-        nav.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        nav.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        let hosting = HostingController(rootView: contentView)
+        let nav = NavigationController(rootViewController: hosting)
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = UIColor.black
+        nav.navigationBar.standardAppearance = navBarAppearance
+        nav.navigationBar.scrollEdgeAppearance = navBarAppearance
         nav.navigationBar.prefersLargeTitles = true
+        
         return nav
     }
     
