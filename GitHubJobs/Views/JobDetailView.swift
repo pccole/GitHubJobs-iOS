@@ -9,14 +9,24 @@
 import SwiftUI
 
 struct JobDetailView: View {
+    
+    let job: GithubJob
+    
+    init(job: GithubJob) {
+        self.job = job
+    }
+    
     var body: some View {
-        Text("Job Detail")
-        .navigationBarTitle("Job Detail View")
+        ScrollView {
+            Text(job.description)
+        }
     }
 }
 
 struct JobDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        JobDetailView()
+        let data = PreviewData.load()
+        let first = data.first!
+        return JobDetailView(job: first)
     }
 }

@@ -12,22 +12,29 @@ struct JobListView: View {
     
     @EnvironmentObject var model: JobViewModel
     
+    private var searchParameters = SearchParameters()
+    
+    @State private var isSearchViewPresented: Bool = false
+    
     var body: some View {
         List {
             ForEach(model.jobs) { (job: GithubJob) in
-                NavigationLink(destination: JobDetailView()) {
-                    JobView(job: job)
+                NavigationLink(destination: JobDetailView(job: job)) {
+                    JobCellView(job: job)
                 }
             }
         }
         .navigationBarTitle("Github Jobs")
         .navigationBarItems(trailing:
             Button("Search") {
-            
+                self.isSearchViewPresented.toggle()
             }
             .foregroundColor(Color.white)
         )
-
+        .sheet(isPresented: $isSearchViewPresented) {
+                SearchView()
+                    .environmentObject(self.searchParameters)
+        }
     }
 }
 

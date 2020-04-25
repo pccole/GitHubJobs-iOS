@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9412831924510D4F004C2E28 /* GitHubJobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412831824510D4F004C2E28 /* GitHubJobsTests.swift */; };
-		9412832124511498004C2E28 /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412832024511498004C2E28 /* JobView.swift */; };
+		9412832124511498004C2E28 /* JobCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412832024511498004C2E28 /* JobCellView.swift */; };
 		947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91DC24538B6900D09F2D /* NavigationController.swift */; };
+		947A91E52453CA5600D09F2D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E42453CA5600D09F2D /* SearchView.swift */; };
+		947A91E72453CE3600D09F2D /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E62453CE3600D09F2D /* SearchParameters.swift */; };
+		947A91E92453FAC700D09F2D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E82453FAC700D09F2D /* Network.swift */; };
 		94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94835785245293970093BC6C /* NavigationConfigurator.swift */; };
 		94CAC92C2452BD6200DA15AE /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAC92B2452BD6200DA15AE /* JobDetailView.swift */; };
-		94CAC92E2452BFD100DA15AE /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAC92D2452BFD100DA15AE /* HostingController.swift */; };
 		94CB9A5C2450057B00279210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5B2450057B00279210 /* AppDelegate.swift */; };
 		94CB9A5E2450057B00279210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5D2450057B00279210 /* SceneDelegate.swift */; };
 		94CB9A612450057B00279210 /* GitHubJobs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5F2450057B00279210 /* GitHubJobs.xcdatamodeld */; };
@@ -49,11 +51,13 @@
 		9412831624510D4F004C2E28 /* GitHubJobsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubJobsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412831824510D4F004C2E28 /* GitHubJobsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubJobsTests.swift; sourceTree = "<group>"; };
 		9412831A24510D4F004C2E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9412832024511498004C2E28 /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
+		9412832024511498004C2E28 /* JobCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellView.swift; sourceTree = "<group>"; };
 		947A91DC24538B6900D09F2D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		947A91E42453CA5600D09F2D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		947A91E62453CE3600D09F2D /* SearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParameters.swift; sourceTree = "<group>"; };
+		947A91E82453FAC700D09F2D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		94835785245293970093BC6C /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		94CAC92B2452BD6200DA15AE /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
-		94CAC92D2452BFD100DA15AE /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		94CB9A582450057B00279210 /* GitHubJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CB9A5B2450057B00279210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94CB9A5D2450057B00279210 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				94CB9A6C2450057C00279210 /* Info.plist */,
 				94CB9A5B2450057B00279210 /* AppDelegate.swift */,
 				94CB9A5D2450057B00279210 /* SceneDelegate.swift */,
+				947A91E82453FAC700D09F2D /* Network.swift */,
 				94CB9A952450203200279210 /* PropertyWrappers */,
 				94CB9A9024501D7600279210 /* Models */,
 				94CB9A9B2450280800279210 /* ViewModels */,
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				94CB9A9124501D9400279210 /* GithubJob.swift */,
+				947A91E62453CE3600D09F2D /* SearchParameters.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,11 +212,11 @@
 			isa = PBXGroup;
 			children = (
 				947A91DC24538B6900D09F2D /* NavigationController.swift */,
-				94CAC92D2452BFD100DA15AE /* HostingController.swift */,
 				94835785245293970093BC6C /* NavigationConfigurator.swift */,
 				94CB9A99245027E700279210 /* JobListView.swift */,
-				9412832024511498004C2E28 /* JobView.swift */,
+				9412832024511498004C2E28 /* JobCellView.swift */,
 				94CAC92B2452BD6200DA15AE /* JobDetailView.swift */,
+				947A91E42453CA5600D09F2D /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,15 +370,17 @@
 			files = (
 				94CB9A9F24502E0300279210 /* PreviewData.swift in Sources */,
 				94CB9A9224501D9400279210 /* GithubJob.swift in Sources */,
+				947A91E92453FAC700D09F2D /* Network.swift in Sources */,
 				94CB9A5C2450057B00279210 /* AppDelegate.swift in Sources */,
+				947A91E72453CE3600D09F2D /* SearchParameters.swift in Sources */,
 				94CAC92C2452BD6200DA15AE /* JobDetailView.swift in Sources */,
 				94CB9A9D2450289900279210 /* JobViewModel.swift in Sources */,
 				947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */,
-				94CAC92E2452BFD100DA15AE /* HostingController.swift in Sources */,
 				94CB9A9A245027E700279210 /* JobListView.swift in Sources */,
 				94CB9A97245020CD00279210 /* URLValue.swift in Sources */,
 				94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */,
-				9412832124511498004C2E28 /* JobView.swift in Sources */,
+				9412832124511498004C2E28 /* JobCellView.swift in Sources */,
+				947A91E52453CA5600D09F2D /* SearchView.swift in Sources */,
 				94CB9A612450057B00279210 /* GitHubJobs.xcdatamodeld in Sources */,
 				94CB9A5E2450057B00279210 /* SceneDelegate.swift in Sources */,
 				94D4DDCB245123F200B190C2 /* OptionalURLValue.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct JobView: View {
+struct JobCellView: View {
     
     let job: GithubJob
     
@@ -26,7 +26,7 @@ struct JobView_Previews: PreviewProvider {
         let data: [GithubJob] = PreviewData.load()
         return Group {
             ForEach(data) { (job: GithubJob) in
-                JobView(job: job)
+                JobCellView(job: job)
                     .previewLayout(.sizeThatFits)
             }
         }
