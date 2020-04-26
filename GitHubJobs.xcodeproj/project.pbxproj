@@ -28,6 +28,9 @@
 		94CB9A9D2450289900279210 /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A9C2450289900279210 /* JobViewModel.swift */; };
 		94CB9A9F24502E0300279210 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A9E24502E0300279210 /* PreviewData.swift */; };
 		94D4DDCB245123F200B190C2 /* OptionalURLValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */; };
+		94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BA2454A5C6002358D8 /* AttributedText.swift */; };
+		94FB28BD2454F332002358D8 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BC2454F332002358D8 /* WebView.swift */; };
+		94FB28C024550A52002358D8 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BF24550A52002358D8 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		94CB9A9C2450289900279210 /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 		94CB9A9E24502E0300279210 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalURLValue.swift; sourceTree = "<group>"; };
+		94FB28BA2454A5C6002358D8 /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		94FB28BC2454F332002358D8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		94FB28BF24550A52002358D8 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 				94CB9A5B2450057B00279210 /* AppDelegate.swift */,
 				94CB9A5D2450057B00279210 /* SceneDelegate.swift */,
 				947A91E82453FAC700D09F2D /* Network.swift */,
+				94FB28BE24550997002358D8 /* UIViewExtensions */,
 				94CB9A952450203200279210 /* PropertyWrappers */,
 				94CB9A9024501D7600279210 /* Models */,
 				94CB9A9B2450280800279210 /* ViewModels */,
@@ -213,10 +220,10 @@
 			children = (
 				947A91DC24538B6900D09F2D /* NavigationController.swift */,
 				94835785245293970093BC6C /* NavigationConfigurator.swift */,
-				94CB9A99245027E700279210 /* JobListView.swift */,
-				9412832024511498004C2E28 /* JobCellView.swift */,
-				94CAC92B2452BD6200DA15AE /* JobDetailView.swift */,
 				947A91E42453CA5600D09F2D /* SearchView.swift */,
+				94FB28BA2454A5C6002358D8 /* AttributedText.swift */,
+				94FB28BC2454F332002358D8 /* WebView.swift */,
+				94FB28B92454A17A002358D8 /* Job */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +234,24 @@
 				94CB9A9C2450289900279210 /* JobViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94FB28B92454A17A002358D8 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				94CB9A99245027E700279210 /* JobListView.swift */,
+				9412832024511498004C2E28 /* JobCellView.swift */,
+				94CAC92B2452BD6200DA15AE /* JobDetailView.swift */,
+			);
+			path = Job;
+			sourceTree = "<group>";
+		};
+		94FB28BE24550997002358D8 /* UIViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				94FB28BF24550A52002358D8 /* UIViewExtensions.swift */,
+			);
+			path = UIViewExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +395,7 @@
 			files = (
 				94CB9A9F24502E0300279210 /* PreviewData.swift in Sources */,
 				94CB9A9224501D9400279210 /* GithubJob.swift in Sources */,
+				94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */,
 				947A91E92453FAC700D09F2D /* Network.swift in Sources */,
 				94CB9A5C2450057B00279210 /* AppDelegate.swift in Sources */,
 				947A91E72453CE3600D09F2D /* SearchParameters.swift in Sources */,
@@ -377,11 +403,13 @@
 				94CB9A9D2450289900279210 /* JobViewModel.swift in Sources */,
 				947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */,
 				94CB9A9A245027E700279210 /* JobListView.swift in Sources */,
+				94FB28C024550A52002358D8 /* UIViewExtensions.swift in Sources */,
 				94CB9A97245020CD00279210 /* URLValue.swift in Sources */,
 				94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */,
 				9412832124511498004C2E28 /* JobCellView.swift in Sources */,
 				947A91E52453CA5600D09F2D /* SearchView.swift in Sources */,
 				94CB9A612450057B00279210 /* GitHubJobs.xcdatamodeld in Sources */,
+				94FB28BD2454F332002358D8 /* WebView.swift in Sources */,
 				94CB9A5E2450057B00279210 /* SceneDelegate.swift in Sources */,
 				94D4DDCB245123F200B190C2 /* OptionalURLValue.swift in Sources */,
 			);
