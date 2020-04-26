@@ -35,6 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         nav.navigationBar.standardAppearance = navBarAppearance
         nav.navigationBar.scrollEdgeAppearance = navBarAppearance
         nav.navigationBar.prefersLargeTitles = true
+        nav.navigationBar.isTranslucent = false
         return nav
     }
     

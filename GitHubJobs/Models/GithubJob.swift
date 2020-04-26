@@ -26,10 +26,18 @@ extension GithubJob: Identifiable { }
 
 extension GithubJob {
     var attributedHTMLDescription: NSAttributedString {
-        guard let data = description.data(using: .unicode) else { return NSAttributedString() }
+        return htmlAttributedString(string: description)
+    }
+    
+    var attributedHTMLHotToApply: NSAttributedString {
+        htmlAttributedString(string: howToApply)
+    }
+    
+    func htmlAttributedString(string: String) -> NSAttributedString {
+        guard let data = string.data(using: .unicode) else { return NSAttributedString() }
         let options = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html]
         let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil)
-        guard let string = attributedString else { return NSAttributedString() }
-        return string
+        guard let attString = attributedString else { return NSAttributedString() }
+        return attString
     }
 }

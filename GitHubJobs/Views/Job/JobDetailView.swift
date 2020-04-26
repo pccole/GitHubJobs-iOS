@@ -17,9 +17,13 @@ struct JobDetailView: View {
     }
     
     var body: some View {
-//        ScrollView(.horizontal, showsIndicators: false) {
-            AttributedText(attributedString: job.attributedHTMLDescription)
-//        }
+        ScrollView {
+            VStack {
+                AttributedText(attributedString: job.attributedHTMLDescription)
+                AttributedText(attributedString: job.attributedHTMLHotToApply)
+            }
+        }
+        
         .navigationBarTitle(job.company)
     }
 }

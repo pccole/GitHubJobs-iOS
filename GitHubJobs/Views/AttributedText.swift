@@ -30,12 +30,18 @@ struct AttributedText: UIViewRepresentable {
         return v
     }
     
-    func makeUIView(context: Context) -> UILabel {
-        return label
+    func makeUIView(context: Context) -> UITextView {
+        let view = UITextView()
+        view.attributedText = attributedString
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }
     
-    func updateUIView(_ uiView: UILabel, context: Context) {
-
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        uiView.isEditable = false
+        uiView.font = UIFont.systemFont(ofSize: 16)
+        
+        uiView.heightAnchor.constraint(equalToConstant: uiView.contentSize.height).isActive = true
     }
     
 }
