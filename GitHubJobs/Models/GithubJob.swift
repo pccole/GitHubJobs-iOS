@@ -25,19 +25,7 @@ public struct GithubJob: Codable {
 extension GithubJob: Identifiable { }
 
 extension GithubJob {
-    var attributedHTMLDescription: NSAttributedString {
-        return htmlAttributedString(string: description)
-    }
-    
-    var attributedHTMLHotToApply: NSAttributedString {
-        htmlAttributedString(string: howToApply)
-    }
-    
-    func htmlAttributedString(string: String) -> NSAttributedString {
-        guard let data = string.data(using: .unicode) else { return NSAttributedString() }
-        let options = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html]
-        let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil)
-        guard let attString = attributedString else { return NSAttributedString() }
-        return attString
-    }
+  
 }
+
+

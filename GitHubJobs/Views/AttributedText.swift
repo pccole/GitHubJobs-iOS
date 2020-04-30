@@ -14,34 +14,12 @@ struct AttributedText: UIViewRepresentable {
     
     var attributedString: NSAttributedString
     
-    var label: UILabel {
-        let l = UILabel()
-        l.translatesAutoresizingMaskIntoConstraints = false
-        l.numberOfLines = 0
-        l.attributedText = attributedString
-        return l
+    func makeUIView(context: Context) -> HTMLAttributedTextView {
+        return HTMLAttributedTextView(attributedString: attributedString)
     }
     
-    var view: UIView {
-        let v = UIView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        v.addSubview(self.label)
-        self.label.pinToSuperview()
-        return v
-    }
-    
-    func makeUIView(context: Context) -> UITextView {
-        let view = UITextView()
-        view.attributedText = attributedString
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }
-    
-    func updateUIView(_ uiView: UITextView, context: Context) {
-        uiView.isEditable = false
-        uiView.font = UIFont.systemFont(ofSize: 16)
-        
-        uiView.heightAnchor.constraint(equalToConstant: uiView.contentSize.height).isActive = true
+    func updateUIView(_ uiView: HTMLAttributedTextView, context: Context) {
+        uiView.layoutSubviews()
     }
     
 }
