@@ -14,6 +14,19 @@
 		947A91E72453CE3600D09F2D /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E62453CE3600D09F2D /* SearchParameters.swift */; };
 		947A91E92453FAC700D09F2D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E82453FAC700D09F2D /* Network.swift */; };
 		94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94835785245293970093BC6C /* NavigationConfigurator.swift */; };
+		9493C3F4245F7628008B996C /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C3F3245F7628008B996C /* UIFont+Extensions.swift */; };
+		9493C400245FA18F008B996C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3F5245FA18E008B996C /* OpenSans-Regular.ttf */; };
+		9493C401245FA18F008B996C /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3F6245FA18E008B996C /* OpenSans-SemiBold.ttf */; };
+		9493C402245FA18F008B996C /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3F7245FA18E008B996C /* OpenSans-ExtraBoldItalic.ttf */; };
+		9493C403245FA18F008B996C /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3F8245FA18E008B996C /* OpenSans-ExtraBold.ttf */; };
+		9493C404245FA18F008B996C /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3F9245FA18E008B996C /* OpenSans-SemiBoldItalic.ttf */; };
+		9493C405245FA18F008B996C /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FA245FA18F008B996C /* LICENSE.txt */; };
+		9493C406245FA18F008B996C /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FB245FA18F008B996C /* OpenSans-LightItalic.ttf */; };
+		9493C407245FA18F008B996C /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FC245FA18F008B996C /* OpenSans-BoldItalic.ttf */; };
+		9493C408245FA18F008B996C /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FD245FA18F008B996C /* OpenSans-Bold.ttf */; };
+		9493C409245FA18F008B996C /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */; };
+		9493C40A245FA18F008B996C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */; };
+		9493C40C245FA81E008B996C /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C40B245FA81E008B996C /* UITextView+Extensions.swift */; };
 		94CAC92C2452BD6200DA15AE /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAC92B2452BD6200DA15AE /* JobDetailView.swift */; };
 		94CB9A5C2450057B00279210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5B2450057B00279210 /* AppDelegate.swift */; };
 		94CB9A5E2450057B00279210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5D2450057B00279210 /* SceneDelegate.swift */; };
@@ -30,7 +43,7 @@
 		94D4331F24592D6F00B6D00D /* AttributedTextUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4331E24592D6F00B6D00D /* AttributedTextUIView.swift */; };
 		94D43322245A2BD500B6D00D /* JobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D43321245A2BD500B6D00D /* JobDetailViewController.swift */; };
 		94D43324245A58BD00B6D00D /* JobDetailVCRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D43323245A58BD00B6D00D /* JobDetailVCRepresentable.swift */; };
-		94D43327245A66A400B6D00D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D43326245A66A400B6D00D /* StringExtension.swift */; };
+		94D43327245A66A400B6D00D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D43326245A66A400B6D00D /* String+Extension.swift */; };
 		94D4DDCB245123F200B190C2 /* OptionalURLValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */; };
 		94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BA2454A5C6002358D8 /* AttributedText.swift */; };
 		94FB28BD2454F332002358D8 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BC2454F332002358D8 /* WebView.swift */; };
@@ -64,6 +77,19 @@
 		947A91E62453CE3600D09F2D /* SearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParameters.swift; sourceTree = "<group>"; };
 		947A91E82453FAC700D09F2D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		94835785245293970093BC6C /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		9493C3F3245F7628008B996C /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		9493C3F5245FA18E008B996C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		9493C3F6245FA18E008B996C /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		9493C3F7245FA18E008B996C /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		9493C3F8245FA18E008B996C /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		9493C3F9245FA18E008B996C /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		9493C3FA245FA18F008B996C /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		9493C3FB245FA18F008B996C /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		9493C3FC245FA18F008B996C /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		9493C3FD245FA18F008B996C /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		9493C40B245FA81E008B996C /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		94CAC92B2452BD6200DA15AE /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
 		94CB9A582450057B00279210 /* GitHubJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CB9A5B2450057B00279210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +113,7 @@
 		94D4331E24592D6F00B6D00D /* AttributedTextUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextUIView.swift; sourceTree = "<group>"; };
 		94D43321245A2BD500B6D00D /* JobDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailViewController.swift; sourceTree = "<group>"; };
 		94D43323245A58BD00B6D00D /* JobDetailVCRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailVCRepresentable.swift; sourceTree = "<group>"; };
-		94D43326245A66A400B6D00D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		94D43326245A66A400B6D00D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalURLValue.swift; sourceTree = "<group>"; };
 		94FB28BA2454A5C6002358D8 /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
 		94FB28BC2454F332002358D8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -126,6 +152,24 @@
 				9412831A24510D4F004C2E28 /* Info.plist */,
 			);
 			path = GitHubJobsTests;
+			sourceTree = "<group>";
+		};
+		9493C3D8245F74C0008B996C /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				9493C3FA245FA18F008B996C /* LICENSE.txt */,
+				9493C3FD245FA18F008B996C /* OpenSans-Bold.ttf */,
+				9493C3FC245FA18F008B996C /* OpenSans-BoldItalic.ttf */,
+				9493C3F8245FA18E008B996C /* OpenSans-ExtraBold.ttf */,
+				9493C3F7245FA18E008B996C /* OpenSans-ExtraBoldItalic.ttf */,
+				9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */,
+				9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */,
+				9493C3FB245FA18F008B996C /* OpenSans-LightItalic.ttf */,
+				9493C3F5245FA18E008B996C /* OpenSans-Regular.ttf */,
+				9493C3F6245FA18E008B996C /* OpenSans-SemiBold.ttf */,
+				9493C3F9245FA18E008B996C /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = OpenSans;
 			sourceTree = "<group>";
 		};
 		94CB9A4F2450057B00279210 = {
@@ -203,6 +247,7 @@
 		94CB9A8F24501D5000279210 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9493C3D8245F74C0008B996C /* OpenSans */,
 				94CB9A642450057C00279210 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -266,7 +311,9 @@
 		94D43325245A664400B6D00D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				94D43326245A66A400B6D00D /* StringExtension.swift */,
+				94D43326245A66A400B6D00D /* String+Extension.swift */,
+				9493C3F3245F7628008B996C /* UIFont+Extensions.swift */,
+				9493C40B245FA81E008B996C /* UITextView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -401,8 +448,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9493C404245FA18F008B996C /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				94CB9A682450057C00279210 /* PreviewAssets.xcassets in Resources */,
+				9493C40A245FA18F008B996C /* OpenSans-Light.ttf in Resources */,
+				9493C408245FA18F008B996C /* OpenSans-Bold.ttf in Resources */,
+				9493C402245FA18F008B996C /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				9493C409245FA18F008B996C /* OpenSans-Italic.ttf in Resources */,
+				9493C407245FA18F008B996C /* OpenSans-BoldItalic.ttf in Resources */,
+				9493C405245FA18F008B996C /* LICENSE.txt in Resources */,
+				9493C406245FA18F008B996C /* OpenSans-LightItalic.ttf in Resources */,
+				9493C403245FA18F008B996C /* OpenSans-ExtraBold.ttf in Resources */,
 				94CB9A652450057C00279210 /* Assets.xcassets in Resources */,
+				9493C401245FA18F008B996C /* OpenSans-SemiBold.ttf in Resources */,
+				9493C400245FA18F008B996C /* OpenSans-Regular.ttf in Resources */,
 				94CB9A9424501EEF00279210 /* Jobs.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94CB9A9F24502E0300279210 /* PreviewData.swift in Sources */,
-				94D43327245A66A400B6D00D /* StringExtension.swift in Sources */,
+				94D43327245A66A400B6D00D /* String+Extension.swift in Sources */,
 				94CB9A9224501D9400279210 /* GithubJob.swift in Sources */,
 				94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */,
 				947A91E92453FAC700D09F2D /* Network.swift in Sources */,
@@ -440,9 +498,11 @@
 				94CAC92C2452BD6200DA15AE /* JobDetailView.swift in Sources */,
 				94D4331F24592D6F00B6D00D /* AttributedTextUIView.swift in Sources */,
 				94CB9A9D2450289900279210 /* JobViewModel.swift in Sources */,
+				9493C40C245FA81E008B996C /* UITextView+Extensions.swift in Sources */,
 				947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */,
 				94CB9A9A245027E700279210 /* JobListView.swift in Sources */,
 				94FB28C024550A52002358D8 /* UIViewExtensions.swift in Sources */,
+				9493C3F4245F7628008B996C /* UIFont+Extensions.swift in Sources */,
 				94CB9A97245020CD00279210 /* URLValue.swift in Sources */,
 				94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */,
 				9412832124511498004C2E28 /* JobCellView.swift in Sources */,

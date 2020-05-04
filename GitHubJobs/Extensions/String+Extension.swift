@@ -9,8 +9,12 @@
 import Foundation
 
 extension String {
-    // NSAttributedString crashes when called from SwiftUI.
-    // Wrapping it in a async dispatch all resolves the crash.
+    /**
+    -  NSAttributedString crashes when called from SwiftUI. Wrapping it in a async dispatch on the main thread resolves the crash.
+     
+     - parameters:
+        - completion: NSAttributedString with documentType set to html
+     */
     func htmlAttributedString(_ completion: @escaping (NSAttributedString) -> Void) {
         DispatchQueue.main.async {
             guard let data = self.data(using: .unicode) else {

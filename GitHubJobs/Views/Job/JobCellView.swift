@@ -15,7 +15,9 @@ struct JobCellView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(job.title)
+                .font(Font(FontStyle.headline.font!))
             Text(job.company)
+                .font(Font(FontStyle.subhead.font!))
             Text(job.location)
         }
     }

@@ -25,6 +25,7 @@ class JobDetailViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isEditable = false
         view.isScrollEnabled = false
+        view.font = FontStyle.body.font
         return view
     }
     
@@ -40,13 +41,15 @@ class JobDetailViewController: UIViewController {
     
     private lazy var applyHeaderLabel: UILabel = {
         let label = newHeaderLabel()
-        label.text = "Apply"
+        label.text = "How to Apply"
         return label
     }()
     
     private func newHeaderLabel() -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = FontStyle.title1.font
+        label.numberOfLines = 0
         return label
     }
     
@@ -70,12 +73,16 @@ class JobDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        job.description.htmlAttributedString { (attrString) in
-            self.descriptionTextView.attributedText = attrString
-        }
-        job.howToApply.htmlAttributedString { (attrString) in
-            self.howToApplyTextView.attributedText = attrString
-        }
+        
+        descriptionTextView.setHTML(text: job.description)
+        howToApplyTextView.setHTML(text: job.howToApply)
+        
+//        job.description.htmlAttributedString { (attrString) in
+//            self.descriptionTextView.attributedText = attrString
+//        }
+//        job.howToApply.htmlAttributedString { (attrString) in
+//            self.howToApplyTextView.attributedText = attrString
+//        }
         companyHeaderLabel.text = job.company
         
         addSubviews()
