@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9407339D2460E628002C3F87 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9407339C2460E628002C3F87 /* DateValue.swift */; };
 		9412831924510D4F004C2E28 /* GitHubJobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412831824510D4F004C2E28 /* GitHubJobsTests.swift */; };
 		9412832124511498004C2E28 /* JobCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412832024511498004C2E28 /* JobCellView.swift */; };
 		947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91DC24538B6900D09F2D /* NavigationController.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9407339C2460E628002C3F87 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		9412831624510D4F004C2E28 /* GitHubJobsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubJobsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412831824510D4F004C2E28 /* GitHubJobsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubJobsTests.swift; sourceTree = "<group>"; };
 		9412831A24510D4F004C2E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			children = (
 				94CB9A96245020CD00279210 /* URLValue.swift */,
 				94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */,
+				9407339C2460E628002C3F87 /* DateValue.swift */,
 			);
 			path = PropertyWrappers;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				94CAC92C2452BD6200DA15AE /* JobDetailView.swift in Sources */,
 				94D4331F24592D6F00B6D00D /* AttributedTextUIView.swift in Sources */,
 				94CB9A9D2450289900279210 /* JobViewModel.swift in Sources */,
+				9407339D2460E628002C3F87 /* DateValue.swift in Sources */,
 				9493C40C245FA81E008B996C /* UITextView+Extensions.swift in Sources */,
 				947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */,
 				94CB9A9A245027E700279210 /* JobListView.swift in Sources */,

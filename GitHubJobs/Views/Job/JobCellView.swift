@@ -19,7 +19,17 @@ struct JobCellView: View {
             Text(job.company)
                 .font(Font(FontStyle.subhead.font!))
             Text(job.location)
+                .font(Font(FontStyle.footnote.font!))
+            HStack {
+                Image(systemName: "clock")
+                Text("\(job.createdAt)")
+                    .font(Font(FontStyle.footnote.font!))
+                Image(systemName: "briefcase")
+                Text(job.type)
+                    .font(Font(FontStyle.footnote.font!))
+            }
         }
+    .padding()
     }
 }
 

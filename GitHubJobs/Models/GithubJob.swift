@@ -12,7 +12,7 @@ public struct GithubJob: Codable {
     public let id: String
     public let type: String
     @URLValue public var url: URL
-    public let createdAt: String
+    @DateValue var createdAt: Date
     public let company: String
     @OptionalURLValue public var companyUrl: URL?
     let location: String

@@ -21,6 +21,7 @@ struct JobListView: View {
             ForEach(model.jobs) { (job: GithubJob) in
                 NavigationLink(destination: JobDetailView(job: job)) {
                     JobCellView(job: job)
+                        .border(Color.red)
                 }
             }
         }
