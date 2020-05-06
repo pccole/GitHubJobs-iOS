@@ -18,6 +18,7 @@ struct JobDetailView: View {
     
     var body: some View {
         JobDetailVCRepresentable(job: job)
+            .navigationBarTitle("", displayMode: .inline)
     }
 }
 

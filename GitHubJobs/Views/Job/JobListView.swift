@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct JobListView: View {
     
@@ -19,10 +20,19 @@ struct JobListView: View {
     var body: some View {
         List {
             ForEach(model.jobs) { (job: GithubJob) in
-                NavigationLink(destination: JobDetailView(job: job)) {
+                ZStack {
+                    NavigationLink(destination: JobDetailView(job: job)) {
+                        EmptyView()
+                    }
                     JobCellView(job: job)
-                        .border(Color.red)
                 }
+                .background(
+                    Color.gitGray
+                    .cornerRadius(15)
+                    .shadow(radius: 5)
+                )
+                
+                
             }
         }
         .navigationBarTitle("Github Jobs")

@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        applyApperance()
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             let nav = setupHostingController()
@@ -22,6 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+    }
+    
+    func applyApperance() {
+        UITableView.appearance().separatorColor = .clear
     }
     
     func setupHostingController() -> UINavigationController {
@@ -34,8 +40,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navBarAppearance.backgroundColor = UIColor.black
         nav.navigationBar.standardAppearance = navBarAppearance
         nav.navigationBar.scrollEdgeAppearance = navBarAppearance
-//        nav.navigationBar.prefersLargeTitles = true
         nav.navigationBar.isTranslucent = false
+        nav.navigationBar.prefersLargeTitles = true
         return nav
     }
     

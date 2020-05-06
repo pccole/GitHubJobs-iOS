@@ -13,23 +13,27 @@ struct JobCellView: View {
     let job: GithubJob
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text(job.title)
-                .font(Font(FontStyle.headline.font!))
-            Text(job.company)
-                .font(Font(FontStyle.subhead.font!))
-            Text(job.location)
-                .font(Font(FontStyle.footnote.font!))
-            HStack {
-                Image(systemName: "clock")
-                Text("\(job.createdAt)")
+        HStack {
+            VStack(alignment: .leading, spacing: 5) {
+                Text(job.title)
+                    .font(Font(FontStyle.headline.font!))
+                Text(job.company)
+                    .font(Font(FontStyle.subhead.font!))
+                Text(job.location)
                     .font(Font(FontStyle.footnote.font!))
-                Image(systemName: "briefcase")
-                Text(job.type)
-                    .font(Font(FontStyle.footnote.font!))
+                HStack {
+                    Image(systemName: "clock")
+                    Text("\(job.createdAt)")
+                        .font(Font(FontStyle.footnote.font!))
+                    Image(systemName: "briefcase")
+                    Text(job.type)
+                        .font(Font(FontStyle.footnote.font!))
+                }
             }
+            Spacer()
+            Image(uiImage: #imageLiteral(resourceName: "Disclosure"))
         }
-    .padding()
+        .padding()
     }
 }
 

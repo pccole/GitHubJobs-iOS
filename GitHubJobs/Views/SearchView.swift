@@ -22,6 +22,9 @@ struct SearchView: View {
                     TextField("New York, 27344", text: $searchParameters.location)
                 }
             }
+            .background(NavigationConfigurator { nc in
+                nc.navigationBar.backgroundColor = UIColor.blue
+            })
         }
     }
 }
