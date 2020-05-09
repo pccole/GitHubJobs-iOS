@@ -10,11 +10,9 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    static var grayLight: Color {
-        return Color("gray-light")
-    }
+    static let grayLight = Color("gray-light")
     
-    static var gitGray: Color {
-        return Color("gray")
-    }
+    static let gitGray = Color("gray")
+    
+    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
 }

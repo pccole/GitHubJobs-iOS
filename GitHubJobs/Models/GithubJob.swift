@@ -25,7 +25,10 @@ public struct GithubJob: Codable {
 extension GithubJob: Identifiable { }
 
 extension GithubJob {
-  
+    var createdAtDescription: String {
+        let timeInterval = Date().timeIntervalSince(createdAt)
+        let days = timeInterval / 86400
+        return String(format: "%.0f day\(days > 1 ? "s" : "") ago", days)
+    }
 }
-
 
