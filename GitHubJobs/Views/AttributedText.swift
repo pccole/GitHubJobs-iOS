@@ -12,14 +12,25 @@ import UIKit
 
 struct AttributedText: UIViewRepresentable {
     
-    var attributedString: NSAttributedString
+    let string: String
     
-    func makeUIView(context: Context) -> HTMLAttributedTextView {
-        return HTMLAttributedTextView(attributedString: attributedString)
+    var textView: UITextView {
+        let view = UITextView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.isScrollEnabled = false
+        view.isEditable = false
+        return view
     }
     
-    func updateUIView(_ uiView: HTMLAttributedTextView, context: Context) {
-        uiView.layoutSubviews()
+    func makeUIView(context: Context) -> UITextView {
+        return textView
+    }
+    
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        string.htmlAttributedString { (attrString) in
+            uiView.attributedText = attrString
+            uiView.layoutIfNeeded()
+        }
     }
     
 }

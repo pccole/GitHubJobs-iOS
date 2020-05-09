@@ -21,13 +21,17 @@ struct JobCellView: View {
                     .font(Font(FontStyle.subhead.font!))
                 Text(job.location)
                     .font(Font(FontStyle.footnote.font!))
-                HStack {
-                    Image(systemName: "clock")
-                    Text("\(job.createdAt)")
-                        .font(Font(FontStyle.footnote.font!))
-                    Image(systemName: "briefcase")
-                    Text(job.type)
-                        .font(Font(FontStyle.footnote.font!))
+                HStack(spacing: 15) {
+                    HStack(spacing: 5) {
+                        Image(uiImage: UIImage(systemName: "clock", withConfiguration: UIImage.SymbolConfiguration(textStyle: .footnote))!)
+                        Text("\(job.createdAtDescription)")
+                            .font(Font(FontStyle.footnote.font!))
+                    }
+                    HStack(spacing: 5) {
+                        Image(uiImage: UIImage(systemName: "briefcase", withConfiguration: UIImage.SymbolConfiguration(textStyle: .footnote))!)
+                        Text(job.type)
+                            .font(Font(FontStyle.footnote.font!))
+                    }
                 }
             }
             Spacer()

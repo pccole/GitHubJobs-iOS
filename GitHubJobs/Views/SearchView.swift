@@ -26,6 +26,7 @@ struct SearchView: View {
                 nc.navigationBar.backgroundColor = UIColor.blue
             })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

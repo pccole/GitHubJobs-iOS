@@ -77,12 +77,6 @@ class JobDetailViewController: UIViewController {
         descriptionTextView.setHTML(text: job.description)
         howToApplyTextView.setHTML(text: job.howToApply)
         
-//        job.description.htmlAttributedString { (attrString) in
-//            self.descriptionTextView.attributedText = attrString
-//        }
-//        job.howToApply.htmlAttributedString { (attrString) in
-//            self.howToApplyTextView.attributedText = attrString
-//        }
         companyHeaderLabel.text = job.company
         
         addSubviews()
