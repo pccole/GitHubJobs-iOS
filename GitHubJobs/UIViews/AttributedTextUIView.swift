@@ -13,18 +13,14 @@ class HTMLAttributedTextView: UIView {
     private lazy var textView: UITextView = {
         let view = UITextView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        
+        view.isScrollEnabled = false
+        view.isEditable = false
         return view
     }()
     
-    init(attributedString: NSAttributedString) {
+    init() {
         super.init(frame: .zero)
         addSubview(textView)
-        textView.attributedText = attributedString
-        textView.isScrollEnabled = false
-        textView.isEditable = false
-        translatesAutoresizingMaskIntoConstraints = false
-        textView.sizeToFit()
     }
     
     private override init(frame: CGRect) {
@@ -40,9 +36,6 @@ class HTMLAttributedTextView: UIView {
         leadingAnchor.constraint(equalTo: textView.leadingAnchor, constant: 0).isActive = true
         trailingAnchor.constraint(equalTo: textView.trailingAnchor, constant: 0).isActive = true
         bottomAnchor.constraint(equalTo: textView.bottomAnchor).isActive = true
-        let width = widthAnchor.constraint(lessThanOrEqualToConstant: UIScreen.main.bounds.width)
-        width.priority = .defaultHigh
-        width.isActive = true
 //        textView.layoutIfNeeded()
     }
 }
