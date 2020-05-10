@@ -24,8 +24,8 @@ struct JobListView: View {
     @State private var isSearchViewPresented: Bool = false
     
     var body: some View {
-        List {
-            ForEach(model) { (job) in
+        List(model) { (job) in
+            
                 ZStack {
                     NavigationLink(destination: JobDetailView(job: job)) {
                         EmptyView()
@@ -38,7 +38,7 @@ struct JobListView: View {
                     .shadow(color: Color.black.opacity(0.3), radius: 5, x: 10, y: 10)
                     .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
                 )
-            }
+            
         }
         .navigationBarTitle("Github Jobs")
         .navigationBarItems(trailing:
