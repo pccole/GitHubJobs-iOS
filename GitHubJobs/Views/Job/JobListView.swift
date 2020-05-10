@@ -14,7 +14,7 @@ struct JobListView: View {
     @State private var showDetail = false
     
     init() {
-//        UITableViewCell.appearance().selectionStyle = .none
+        UITableViewCell.appearance().backgroundColor = UIColor.clear
     }
     
     @EnvironmentObject var model: JobViewModel
@@ -36,6 +36,7 @@ struct JobListView: View {
                     })
                     .buttonStyle(SimpleButtonStyle())
                 }
+                
             }
             
             

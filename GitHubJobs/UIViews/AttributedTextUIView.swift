@@ -36,6 +36,5 @@ class HTMLAttributedTextView: UIView {
         leadingAnchor.constraint(equalTo: textView.leadingAnchor, constant: 0).isActive = true
         trailingAnchor.constraint(equalTo: textView.trailingAnchor, constant: 0).isActive = true
         bottomAnchor.constraint(equalTo: textView.bottomAnchor).isActive = true
-//        textView.layoutIfNeeded()
     }
 }
