@@ -10,20 +10,47 @@ import Foundation
 
 class JobViewModel: ObservableObject {
     @Published var jobs: [GithubJob] = []
+    @Published var error: Error = NSError(domain: "", code: 0, userInfo: nil)
+    
+    private var page = 1
+    private var jobsPerPage = 50
+    
+    init() {
+        getJobs()
+    }
     
     func getJobs() {
-//        #if DEBUG
+        #if DEBUG
             loadLocalData()
-//        #else
-//            loadNetworkData()
-//        #endif
+        #else
+            fetchData()
+        #endif
     }
     
     private func loadLocalData() {
         jobs = PreviewData.load()
     }
     
-    private func loadNetworkData() {
+    private func fetchData() {
         
+    }
+}
+
+extension JobViewModel: RandomAccessCollection {
+    typealias Element = GithubJob
+    
+    var startIndex: Int {
+        return jobs.startIndex
+    }
+    
+    var endIndex: Int {
+        return jobs.endIndex
+    }
+    
+    subscript(position: Int) -> GithubJob {
+        if jobs.count >= jobsPerPage, jobs.distance(from: position, to: jobs.count) == 10 {
+            page += 1
+        }
+        return jobs[position]
     }
 }

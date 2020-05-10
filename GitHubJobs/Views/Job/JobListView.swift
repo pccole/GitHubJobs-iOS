@@ -24,23 +24,17 @@ struct JobListView: View {
     @State private var isSearchViewPresented: Bool = false
     
     var body: some View {
-        List {
-            ForEach(model.jobs) { (job: GithubJob) in
-                ZStack {
-                    NavigationLink(destination: JobDetailView(job: job)) {
-                        EmptyView()
-                    }
-                    
-                    Button(action: {}, label: {
-                        JobCellView(job: job)
-                    })
-                    .buttonStyle(SimpleButtonStyle())
+        List(model, rowContent: { (job: GithubJob) in
+            ZStack {
+                NavigationLink(destination: JobDetailView(job: job)) {
+                    EmptyView()
                 }
-                
+                Button(action: {}, label: {
+                    JobCellView(job: job)
+                })
+                .buttonStyle(SimpleButtonStyle())
             }
-            
-            
-        }
+        })
         .navigationBarTitle("Github Jobs")
         .navigationBarItems(trailing:
             Button("Search") {
