@@ -45,6 +45,7 @@ struct JobListView: View {
             Button("Search") {
                 self.isSearchViewPresented.toggle()
             }
+            .font(Font(FontStyle.subhead.font!))
             .foregroundColor(Color.white)
         )
         .sheet(isPresented: $isSearchViewPresented) {
