@@ -11,13 +11,42 @@ import UIKit
 class JobDetailViewController: UIViewController {
 
     private let job: GithubJob
+ 
+    private lazy var descriptionContainerView: UIView = {
+        let v = newContainerView()
+        v.addSubview(self.descriptionTextView)
+        self.descriptionTextView.pinToSuperview()
+        return v
+    }()
+    
+    private lazy var howToApplyContainerView: UIView = {
+        let v = newContainerView()
+        v.addSubview(self.howToApplyTextView)
+        self.howToApplyTextView.pinToSuperview()
+        return v
+    }()
+    
+    private func newContainerView() -> UIView {
+        let v = UIView()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        v.clipsToBounds = false
+        v.layer.shadowColor = UIColor.white.cgColor
+        v.layer.shadowOpacity = 0.7
+        v.layer.shadowRadius = 5.0
+        v.layer.shadowOffset = CGSize(width: -5, height: -5)
+        return v
+    }
     
     private lazy var descriptionTextView: UITextView = {
-        return newTextView()
+        let textView = newTextView()
+        textView.setHTML(text: self.job.description)
+        return textView
     }()
     
     private lazy var howToApplyTextView: UITextView = {
-        return newTextView()
+        let textView = newTextView()
+        textView.setHTML(text: job.howToApply)
+        return textView
     }()
     
     private func newTextView() -> UITextView {
@@ -25,7 +54,15 @@ class JobDetailViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isEditable = false
         view.isScrollEnabled = false
-        view.font = FontStyle.body.font
+        view.font = FontStyle.callout.font
+        view.clipsToBounds = false
+        view.backgroundColor = UIColor.gitGray
+        view.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
+        view.layer.cornerRadius = 25
+        view.layer.shadowRadius = 5
+        view.layer.shadowOffset = CGSize(width: 5, height: 5)
+        view.layer.shadowOpacity = 0.3
+        view.layer.shadowColor = UIColor.black.cgColor
         return view
     }
     
@@ -36,7 +73,9 @@ class JobDetailViewController: UIViewController {
     }()
     
     private lazy var companyHeaderLabel: UILabel = {
-       return newHeaderLabel()
+        let label = newHeaderLabel()
+        label.text = self.job.company
+        return label
     }()
     
     private lazy var applyHeaderLabel: UILabel = {
@@ -53,12 +92,20 @@ class JobDetailViewController: UIViewController {
         return label
     }
     
+    private func spacerView() -> UIView {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        return view
+    }
+    
     private lazy var vStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [self.companyHeaderLabel, self.descriptionTextView, self.applyHeaderLabel, self.howToApplyTextView])
+        let stack = UIStackView(arrangedSubviews: [self.spacerView(), self.companyHeaderLabel, self.descriptionContainerView, self.spacerView(), self.applyHeaderLabel, self.howToApplyContainerView, self.spacerView()])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         stack.spacing = 5
-        stack.alignment = .leading
+        stack.alignment = .fill
+        
         return stack
     }()
     
@@ -73,11 +120,9 @@ class JobDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.background
         
-        descriptionTextView.setHTML(text: job.description)
-        howToApplyTextView.setHTML(text: job.howToApply)
         
-        companyHeaderLabel.text = job.company
         
         addSubviews()
         applyConstraints()

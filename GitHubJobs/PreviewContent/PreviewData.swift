@@ -26,7 +26,7 @@ public struct PreviewData {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let json = try decoder.decode([GithubJob].self, from: data)
-            print(json)
+//            print(json)
             return json
         } catch {
             fatalError("Couldn't parse \(filename) as \([GithubJob].self):\n\(error)")
