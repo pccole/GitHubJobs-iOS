@@ -65,9 +65,9 @@
         "color-space" : "srgb",
         "components" : {
           "alpha" : "1.000",
-          "blue" : "0xE7",
-          "green" : "0xE5",
-          "red" : "0xE3"
+          "blue" : "0xE4",
+          "green" : "0xE2",
+          "red" : "0xE0"
         }
       },
       "idiom" : "ipad",
