@@ -56,7 +56,7 @@ class JobDetailViewController: UIViewController {
         view.isScrollEnabled = false
         view.font = FontStyle.callout.font
         view.clipsToBounds = false
-        view.backgroundColor = UIColor.gitGray
+        view.backgroundColor = UIColor.offWhite
         view.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         view.layer.cornerRadius = 25
         view.layer.shadowRadius = 5
@@ -87,7 +87,7 @@ class JobDetailViewController: UIViewController {
     private func newHeaderLabel() -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = FontStyle.title1.font
+        label.font = UIFont.systemFont(ofSize: 28, weight: .semibold)
         label.numberOfLines = 0
         return label
     }
@@ -103,7 +103,7 @@ class JobDetailViewController: UIViewController {
         let stack = UIStackView(arrangedSubviews: [self.spacerView(), self.companyHeaderLabel, self.descriptionContainerView, self.spacerView(), self.applyHeaderLabel, self.howToApplyContainerView, self.spacerView()])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.spacing = 5
+        stack.spacing = 10
         stack.alignment = .fill
         
         return stack
@@ -120,7 +120,7 @@ class JobDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.background
+        view.backgroundColor = UIColor.offWhite
         
         
         

@@ -20,7 +20,7 @@ struct NavigationConfigurator: UIViewControllerRepresentable {
         if let nc = uiViewController.navigationController {
             configure(nc)
         } else {
-            print("didn't work")
+            print("Navigation Controller not found")
         }
     }
 }

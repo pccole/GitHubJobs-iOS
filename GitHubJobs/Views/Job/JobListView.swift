@@ -11,13 +11,6 @@ import UIKit
 
 struct JobListView: View {
     
-    @State private var showDetail = false
-    
-    init() {
-        UITableViewCell.appearance().backgroundColor = UIColor.clear
-        UITableView.appearance().backgroundColor = UIColor(named: "background")
-    }
-    
     @EnvironmentObject var model: JobViewModel
     
     private var searchParameters = SearchParameters()
@@ -34,7 +27,7 @@ struct JobListView: View {
             }
             .background(
                 RoundedRectangle(cornerRadius: 25)
-                .fill(Color.gitGray)
+                .fill(Color.offWhite)
                 .shadow(color: Color.black.opacity(0.3), radius: 5, x: 5, y: 5)
                 .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
             )

@@ -17,6 +17,8 @@ extension Color {
     static let offWhite = Color(red: 217 / 255, green: 225 / 255, blue: 235 / 255)
     
     static let background = Color("background")
+    
+    static let blueLight = Color("blue-light")
 }
 
 extension UIColor {
@@ -28,4 +30,6 @@ extension UIColor {
     static let offWhite = UIColor(red: 217 / 255, green: 225 / 255, blue: 235 / 255, alpha: 1.0)
     
     static let background = UIColor(named: "background")!
+    
+    static let blueLight = UIColor(named: "blue-light")!
 }

@@ -28,6 +28,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func applyApperance() {
         UITableView.appearance().separatorColor = .clear
+        UITableViewCell.appearance().backgroundColor = UIColor.clear
+        UITableView.appearance().backgroundColor = UIColor.offWhite
     }
     
     func setupHostingController() -> UINavigationController {
