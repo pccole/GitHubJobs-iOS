@@ -26,10 +26,7 @@ struct JobListView: View {
                 JobCellView(job: job)
             }
             .background(
-                RoundedRectangle(cornerRadius: 25)
-                .fill(Color.offWhite)
-                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 5, y: 5)
-                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
+                NeomorphismView()
             )
         }
         
@@ -51,10 +48,7 @@ struct SimpleButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .background(
-                RoundedRectangle(cornerRadius: 25)
-                    .fill(Color.gitGray)
-                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 10, y: 10)
-                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
+                NeomorphismView()
             )
     }
 }
@@ -65,13 +59,10 @@ struct NeoButtonStyle: ButtonStyle {
         .background(
             Group {
                 if configuration.isPressed {
-                    RoundedRectangle(cornerRadius: 25)
-                    .fill(Color.gitGray)
-                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
-                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
+                    NeomorphismView()
                 } else {
                     RoundedRectangle(cornerRadius: 25)
-                    .fill(Color.gitGray)
+                    .fill(Color.ghGray)
                     .shadow(color: Color.black.opacity(0.3), radius: 5, x: 10, y: 10)
                     .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
                 }

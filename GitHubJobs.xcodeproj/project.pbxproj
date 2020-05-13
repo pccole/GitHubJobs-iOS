@@ -28,6 +28,7 @@
 		9493C409245FA18F008B996C /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */; };
 		9493C40A245FA18F008B996C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */; };
 		9493C40C245FA81E008B996C /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C40B245FA81E008B996C /* UITextView+Extensions.swift */; };
+		94A8C770246BB36E00C295C4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8C76F246BB36E00C295C4 /* File.swift */; };
 		94CAC92C2452BD6200DA15AE /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAC92B2452BD6200DA15AE /* JobDetailView.swift */; };
 		94CB9A5C2450057B00279210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5B2450057B00279210 /* AppDelegate.swift */; };
 		94CB9A5E2450057B00279210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5D2450057B00279210 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 		94D43327245A66A400B6D00D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D43326245A66A400B6D00D /* String+Extension.swift */; };
 		94D4DDCB245123F200B190C2 /* OptionalURLValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */; };
 		94E723322462595300AA5E66 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E723312462595300AA5E66 /* Color+Extensions.swift */; };
+		94F2EBFE246BA3470049A6AE /* NeomorphismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2EBFD246BA3470049A6AE /* NeomorphismView.swift */; };
 		94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BA2454A5C6002358D8 /* AttributedText.swift */; };
 		94FB28BD2454F332002358D8 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BC2454F332002358D8 /* WebView.swift */; };
 		94FB28C024550A52002358D8 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BF24550A52002358D8 /* UIViewExtensions.swift */; };
@@ -93,6 +95,7 @@
 		9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		9493C40B245FA81E008B996C /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		94A8C76F246BB36E00C295C4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		94CAC92B2452BD6200DA15AE /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
 		94CB9A582450057B00279210 /* GitHubJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CB9A5B2450057B00279210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		94D43326245A66A400B6D00D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalURLValue.swift; sourceTree = "<group>"; };
 		94E723312462595300AA5E66 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		94F2EBFD246BA3470049A6AE /* NeomorphismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeomorphismView.swift; sourceTree = "<group>"; };
 		94FB28BA2454A5C6002358D8 /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
 		94FB28BC2454F332002358D8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		94FB28BF24550A52002358D8 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				94CB9A9B2450280800279210 /* ViewModels */,
 				94D43320245A2BAF00B6D00D /* ViewControllers */,
 				94D4331D24592D1900B6D00D /* UIViews */,
+				94F2EBFF246BA3AC0049A6AE /* ViewRepresentable */,
 				94CB9A982450278600279210 /* Views */,
 				94CB9A8F24501D5000279210 /* Assets */,
 				94CB9A662450057C00279210 /* PreviewContent */,
@@ -279,11 +284,8 @@
 		94CB9A982450278600279210 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				947A91DC24538B6900D09F2D /* NavigationController.swift */,
-				94835785245293970093BC6C /* NavigationConfigurator.swift */,
 				947A91E42453CA5600D09F2D /* SearchView.swift */,
-				94FB28BA2454A5C6002358D8 /* AttributedText.swift */,
-				94FB28BC2454F332002358D8 /* WebView.swift */,
+				94F2EBFD246BA3470049A6AE /* NeomorphismView.swift */,
 				94FB28B92454A17A002358D8 /* Job */,
 			);
 			path = Views;
@@ -308,6 +310,7 @@
 		94D43320245A2BAF00B6D00D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				947A91DC24538B6900D09F2D /* NavigationController.swift */,
 				94D43321245A2BD500B6D00D /* JobDetailViewController.swift */,
 			);
 			path = ViewControllers;
@@ -320,8 +323,19 @@
 				9493C3F3245F7628008B996C /* UIFont+Extensions.swift */,
 				9493C40B245FA81E008B996C /* UITextView+Extensions.swift */,
 				94E723312462595300AA5E66 /* Color+Extensions.swift */,
+				94A8C76F246BB36E00C295C4 /* File.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94F2EBFF246BA3AC0049A6AE /* ViewRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				94835785245293970093BC6C /* NavigationConfigurator.swift */,
+				94FB28BC2454F332002358D8 /* WebView.swift */,
+				94FB28BA2454A5C6002358D8 /* AttributedText.swift */,
+			);
+			path = ViewRepresentable;
 			sourceTree = "<group>";
 		};
 		94FB28B92454A17A002358D8 /* Job */ = {
@@ -497,6 +511,8 @@
 				94D43327245A66A400B6D00D /* String+Extension.swift in Sources */,
 				94E723322462595300AA5E66 /* Color+Extensions.swift in Sources */,
 				94CB9A9224501D9400279210 /* GithubJob.swift in Sources */,
+				94F2EBFE246BA3470049A6AE /* NeomorphismView.swift in Sources */,
+				94A8C770246BB36E00C295C4 /* File.swift in Sources */,
 				94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */,
 				947A91E92453FAC700D09F2D /* Network.swift in Sources */,
 				94D43324245A58BD00B6D00D /* JobDetailVCRepresentable.swift in Sources */,

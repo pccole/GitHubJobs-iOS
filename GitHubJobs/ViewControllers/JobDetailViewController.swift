@@ -105,7 +105,6 @@ class JobDetailViewController: UIViewController {
         stack.axis = .vertical
         stack.spacing = 10
         stack.alignment = .fill
-        
         return stack
     }()
     
@@ -121,9 +120,6 @@ class JobDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.offWhite
-        
-        
-        
         addSubviews()
         applyConstraints()
     }
@@ -135,7 +131,6 @@ class JobDetailViewController: UIViewController {
     
     private func applyConstraints() {
         scollView.pinToSuperview()
-        
         vStack.topAnchor.constraint(equalTo: scollView.topAnchor).isActive = true
         vStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
         vStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15).isActive = true

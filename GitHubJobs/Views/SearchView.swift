@@ -15,16 +15,34 @@ struct SearchView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Description")) {
+                Section(header:
+                    Text("Description")
+                        .font(Font.system(size: 20, weight: .semibold, design: .default))
+                        .foregroundColor(Color.black)
+                ) {
                     TextField("python, ruby, android, ios", text: $searchParameters.description)
+                        .font(Font(FontStyle.body.font!))
+                        .padding()
+                        .background(NeomorphismView())
                 }
-                Section(header: Text("Location")) {
+                Section(header:
+                    Text("Location")
+                        .font(Font.system(size: 20, weight: .semibold, design: .default))
+                        .foregroundColor(Color.black)
+                ) {
                     TextField("New York, 27344", text: $searchParameters.location)
+                        .font(Font(FontStyle.body.font!))
+                        .padding()
+                        .background(NeomorphismView())
                 }
             }
             .background(NavigationConfigurator { nc in
-                nc.navigationBar.backgroundColor = UIColor.blue
+                nc.navigationBar.standardAppearance = UINavigationBarAppearance.defaultAppearance
+                nc.navigationBar.isTranslucent = true
+                nc.navigationBar.backgroundColor = UIColor.ghBlue
             })
+            .navigationBarTitle(Text("Search"))
+            
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -32,6 +50,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView().environmentObject(SearchParameters())
     }
 }

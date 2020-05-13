@@ -36,10 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView = rootView()
         let hosting = UIHostingController(rootView: contentView)
         let nav = NavigationController(rootViewController: hosting)
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = UIColor.black
+        let navBarAppearance = UINavigationBarAppearance.defaultAppearance
         nav.navigationBar.standardAppearance = navBarAppearance
         nav.navigationBar.scrollEdgeAppearance = navBarAppearance
         nav.navigationBar.isTranslucent = false
