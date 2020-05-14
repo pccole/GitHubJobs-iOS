@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  UINavigationBarAppearance+Extensions.swift
 //  GitHubJobs
 //
 //  Created by Phil Cole on 5/13/20.
@@ -14,7 +14,7 @@ extension UINavigationBarAppearance {
         
     static private var _default: UINavigationBarAppearance {
         let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 20)]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.backgroundColor = UIColor.black
         return navBarAppearance

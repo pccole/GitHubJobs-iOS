@@ -32,11 +32,12 @@ struct JobListView: View {
         
         .navigationBarTitle("Github Jobs")
         .navigationBarItems(trailing:
-            Button("Search") {
+            Button(action: {
                 self.isSearchViewPresented.toggle()
-            }
-            .font(Font(FontStyle.subhead.font!))
-            .foregroundColor(Color.white)
+            }, label: {
+                Image(systemName: "magnifyingglass")
+                    .imageScale(.large)
+            })
         )
         .sheet(isPresented: $isSearchViewPresented) {
             SearchView().environmentObject(self.searchParameters)
@@ -62,9 +63,9 @@ struct NeoButtonStyle: ButtonStyle {
                     NeomorphismView()
                 } else {
                     RoundedRectangle(cornerRadius: 25)
-                    .fill(Color.ghGray)
-                    .shadow(color: Color.black.opacity(0.3), radius: 5, x: 10, y: 10)
-                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
+                        .fill(Color.ghGray)
+                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 5, y: 5)
+                        .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
                 }
             }
         )

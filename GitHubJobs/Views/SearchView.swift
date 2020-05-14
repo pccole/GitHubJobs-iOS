@@ -11,6 +11,7 @@ import SwiftUI
 struct SearchView: View {
     
     @EnvironmentObject var searchParameters: SearchParameters
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -31,20 +32,47 @@ struct SearchView: View {
                         .foregroundColor(Color.black)
                 ) {
                     TextField("New York, 27344", text: $searchParameters.location)
-                        .font(Font(FontStyle.body.font!))
+                        
                         .padding()
                         .background(NeomorphismView())
                 }
+                Spacer()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color.ghBlue)
+                        .shadow(color: Color.black.opacity(0.3), radius: 5, x: 5, y: 5)
+                        .shadow(color: Color.white.opacity(0.1), radius: 5, x: -5, y: -5)
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("SEARCH")
+                            .font(Font(FontStyle.body.font!))
+                            .foregroundColor(Color.white)
+                    }
+                    .padding()
+                }
+                                    
             }
+//        .padding(EdgeInsets(top: 10, leading: 14, bottom: 10, trailing: 15))
             .background(NavigationConfigurator { nc in
-                nc.navigationBar.standardAppearance = UINavigationBarAppearance.defaultAppearance
-                nc.navigationBar.isTranslucent = true
-                nc.navigationBar.backgroundColor = UIColor.ghBlue
+                let appearance = UINavigationBarAppearance.defaultAppearance
+                nc.navigationBar.standardAppearance = appearance
+                nc.navigationBar.isTranslucent = false
+                nc.navigationBar.prefersLargeTitles = false
             })
-            .navigationBarTitle(Text("Search"))
-            
+            .navigationBarTitle(Text("Query Terms"))
+            .navigationBarItems(trailing: Button("Clear") {
+                self.searchParameters.description = ""
+                self.searchParameters.location = ""
+            }
+            .font(Font.system(size: 17)))
+//            .background(Color.offWhite.edgesIgnoringSafeArea(.all))
         }
         .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    private func dismiss() -> Void {
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 

@@ -28,7 +28,7 @@
 		9493C409245FA18F008B996C /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */; };
 		9493C40A245FA18F008B996C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */; };
 		9493C40C245FA81E008B996C /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C40B245FA81E008B996C /* UITextView+Extensions.swift */; };
-		94A8C770246BB36E00C295C4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8C76F246BB36E00C295C4 /* File.swift */; };
+		94A8C770246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8C76F246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift */; };
 		94CAC92C2452BD6200DA15AE /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAC92B2452BD6200DA15AE /* JobDetailView.swift */; };
 		94CB9A5C2450057B00279210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5B2450057B00279210 /* AppDelegate.swift */; };
 		94CB9A5E2450057B00279210 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5D2450057B00279210 /* SceneDelegate.swift */; };
@@ -95,7 +95,7 @@
 		9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		9493C40B245FA81E008B996C /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
-		94A8C76F246BB36E00C295C4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		94A8C76F246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBarAppearance+Extensions.swift"; sourceTree = "<group>"; };
 		94CAC92B2452BD6200DA15AE /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
 		94CB9A582450057B00279210 /* GitHubJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CB9A5B2450057B00279210 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -323,7 +323,7 @@
 				9493C3F3245F7628008B996C /* UIFont+Extensions.swift */,
 				9493C40B245FA81E008B996C /* UITextView+Extensions.swift */,
 				94E723312462595300AA5E66 /* Color+Extensions.swift */,
-				94A8C76F246BB36E00C295C4 /* File.swift */,
+				94A8C76F246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -512,7 +512,7 @@
 				94E723322462595300AA5E66 /* Color+Extensions.swift in Sources */,
 				94CB9A9224501D9400279210 /* GithubJob.swift in Sources */,
 				94F2EBFE246BA3470049A6AE /* NeomorphismView.swift in Sources */,
-				94A8C770246BB36E00C295C4 /* File.swift in Sources */,
+				94A8C770246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift in Sources */,
 				94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */,
 				947A91E92453FAC700D09F2D /* Network.swift in Sources */,
 				94D43324245A58BD00B6D00D /* JobDetailVCRepresentable.swift in Sources */,
