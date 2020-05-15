@@ -14,6 +14,8 @@ extension Color {
     
     static let ghGray = Color("gray")
     
+    static let ghGrayDark = Color("gray-dark")
+    
     static let offWhite = Color(red: 217 / 255, green: 225 / 255, blue: 235 / 255)
     
     static let background = Color("background")
@@ -21,6 +23,8 @@ extension Color {
     static let ghBlueLight = Color("blue-light")
     
     static let ghBlue = Color("blue")
+    
+    static let darkBackground = Color("dark-background")
 }
 
 extension UIColor {
