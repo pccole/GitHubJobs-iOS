@@ -33,7 +33,7 @@ struct SearchView: View {
                     
                     TextField("New York, 27344", text: $searchParameters.location)
                         .padding()
-                        .background(NeomorphismView())
+                        .background(NeomorphismView())                    
                 }
                 
                 Spacer()
@@ -48,8 +48,7 @@ struct SearchView: View {
                         .background(
                             RoundedRectangle(cornerRadius: 25)
                                 .fill(Color.ghGrayDark)
-                                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 5, y: 5)
-                                .shadow(color: Color.darkBackground.opacity(0.3), radius: 5, x: -5, y: -5)
+                                .shadow(color: Color.black, radius: 5)
                         )
                 }
             }

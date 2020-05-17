@@ -15,8 +15,17 @@ struct JobCellView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 5) {
-                Text(job.title)
+                HStack(alignment: .center) {
+                    Text(job.title)
                     .font(Font(FontStyle.headline.font!))
+                    Spacer()
+                    if job.isBookmark == true {
+                        Image(systemName: "bookmark.fill").imageScale(.medium)
+                    } else {
+                        Image(systemName: "bookmark").imageScale(.medium)
+                        
+                    }
+                }
                 Text(job.company)
                     .font(Font(FontStyle.subhead.font!))
                 Text(job.location)

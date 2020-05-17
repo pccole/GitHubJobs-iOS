@@ -8,6 +8,13 @@
 
 import Foundation
 
+extension Notification.Name {
+    static var jobs: Notification.Name {
+        return Notification.Name("jobs")
+    }
+    
+}
+
 class JobViewModel: ObservableObject {
     @Published var jobs: [GithubJob] = []
     @Published var error: Error = NSError(domain: "", code: 0, userInfo: nil)

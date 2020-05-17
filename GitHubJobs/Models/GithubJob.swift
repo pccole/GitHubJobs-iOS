@@ -20,6 +20,7 @@ public struct GithubJob: Codable {
     let description: String
     let howToApply: String
     @OptionalURLValue public var companyLogo: URL?
+    var isBookmark: Bool? = false
 }
 
 extension GithubJob: Identifiable { }
