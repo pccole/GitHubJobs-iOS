@@ -21,6 +21,20 @@ struct JobDetailView: View {
             .navigationBarTitle("", displayMode: .inline)
             .background(Color.offWhite)
             .edgesIgnoringSafeArea(.all)
+            .navigationBarItems(trailing:
+                HStack(spacing: 10) {                
+                    Button(action:{}) {
+                        if job.isBookmark == true {
+                            Image(systemName: "bookmark.fill").imageScale(.medium)
+                        } else {
+                            Image(systemName: "bookmark").imageScale(.medium)
+                        }
+                    }
+                    Button(action: {}) {
+                        Image(systemName: "square.and.arrow.up").imageScale(.medium)
+                    }
+            }
+        )
     }
 }
 

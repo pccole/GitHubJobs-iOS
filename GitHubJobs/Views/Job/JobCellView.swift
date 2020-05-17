@@ -19,12 +19,13 @@ struct JobCellView: View {
                     Text(job.title)
                     .font(Font(FontStyle.headline.font!))
                     Spacer()
-                    if job.isBookmark == true {
-                        Image(systemName: "bookmark.fill").imageScale(.medium)
-                    } else {
-                        Image(systemName: "bookmark").imageScale(.medium)
-                        
-                    }
+                    Button(action:{}) {
+                        if job.isBookmark == true {
+                            Image(systemName: "bookmark.fill").imageScale(.medium)
+                        } else {
+                            Image(systemName: "bookmark").imageScale(.medium)
+                        }
+                    }.buttonStyle(PlainButtonStyle())
                 }
                 Text(job.company)
                     .font(Font(FontStyle.subhead.font!))
