@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 extension Notification.Name {
     static var jobs: Notification.Name {
@@ -18,20 +19,30 @@ extension Notification.Name {
 class JobViewModel: ObservableObject {
     @Published var jobs: [GithubJob] = []
     @Published var error: Error = NSError(domain: "", code: 0, userInfo: nil)
+    var params = SearchParameters()
     
-    private var page = 1
     private var jobsPerPage = 50
     
+    var subscriber: AnyCancellable?
+    
     init() {
-        getJobs()
+        getJobs()   
+    }
+    
+    func onAppear(job: GithubJob) {
+        guard let position = jobs.firstIndex(where: { $0.id == job.id }),
+            jobs.count >= jobsPerPage,
+            jobs.distance(from: position, to: jobs.count) == 10 else { return }
+            params.page += 1
+            getJobs()
     }
     
     func getJobs() {
-        #if DEBUG
-            loadLocalData()
-        #else
+//        #if DEBUG
+//            loadLocalData()
+//        #else
             fetchData()
-        #endif
+//        #endif
     }
     
     private func loadLocalData() {
@@ -39,7 +50,18 @@ class JobViewModel: ObservableObject {
     }
     
     private func fetchData() {
-        
+        let publisher = Network.shared.getJobs(paramaters: params, decode: [GithubJob].self)
+        subscriber = publisher.sink(receiveCompletion: { (completion: Subscribers.Completion<Error>) in
+            switch completion {
+            case .failure(let error):
+                print(error)
+                self.error = error
+            case .finished:
+                break
+            }
+        }, receiveValue: { (jobs: [GithubJob]) in
+            self.jobs.append(contentsOf: jobs)
+        })
     }
 }
 
@@ -55,9 +77,6 @@ extension JobViewModel: RandomAccessCollection {
     }
     
     subscript(position: Int) -> GithubJob {
-        if jobs.count >= jobsPerPage, jobs.distance(from: position, to: jobs.count) == 10 {
-            page += 1
-        }
         return jobs[position]
     }
 }

@@ -12,6 +12,7 @@ public struct PreviewData {
     public static func load() -> [GithubJob] {
         let data: Data
         let filename = "Jobs.json"
+        
         guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
             else {
                 fatalError("Couldn't find \(filename) in main bundle.")

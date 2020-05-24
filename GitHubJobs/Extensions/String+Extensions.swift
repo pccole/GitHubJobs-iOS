@@ -1,5 +1,5 @@
 //
-//  StringExtension.swift
+//  StringExtensions.swift
 //  GitHubJobs
 //
 //  Created by Phil Cole on 4/29/20.
@@ -13,7 +13,7 @@ extension String {
     -  NSAttributedString crashes when called from SwiftUI. Wrapping it in a async dispatch on the main thread resolves the crash.
      
      - parameters:
-        - completion: NSAttributedString with documentType set to html
+        - completion: NSAttributedString with documentType set to NSAttributedString.DocumentType.html.
      */
     func htmlAttributedString(_ completion: @escaping (NSAttributedString) -> Void) {
         DispatchQueue.main.async {

@@ -28,6 +28,9 @@ struct JobListView: View {
             .background(
                 NeomorphismView()
             )
+            .onAppear {
+                self.model.onAppear(job: job)
+            }
         }
         
         .navigationBarTitle("Github Jobs")
