@@ -19,9 +19,10 @@ extension Notification.Name {
 class JobViewModel: ObservableObject {
     @Published var jobs: [GithubJob] = []
     @Published var error: Error = NSError(domain: "", code: 0, userInfo: nil)
-    var params = SearchParameters()
     
+    var params = SearchParameters()
     private var jobsPerPage = 50
+    private var isMoreJobs = true
     
     var subscriber: AnyCancellable?
     
@@ -30,19 +31,19 @@ class JobViewModel: ObservableObject {
     }
     
     func onAppear(job: GithubJob) {
-        guard let position = jobs.firstIndex(where: { $0.id == job.id }),
-            jobs.count >= jobsPerPage,
-            jobs.distance(from: position, to: jobs.count) == 10 else { return }
-            params.page += 1
+        guard isMoreJobs,
+            let position = jobs.firstIndex(where: { $0.id == job.id }),
+            jobs.distance(from: position, to: jobs.count) == 10
+            else { return }
             getJobs()
     }
     
     func getJobs() {
-//        #if DEBUG
-//            loadLocalData()
-//        #else
+        #if DEBUG
+            loadLocalData()
+        #else
             fetchData()
-//        #endif
+        #endif
     }
     
     private func loadLocalData() {
@@ -60,6 +61,11 @@ class JobViewModel: ObservableObject {
                 break
             }
         }, receiveValue: { (jobs: [GithubJob]) in
+            if jobs.count == self.jobsPerPage {
+                self.params.page += 1
+            } else {
+                self.isMoreJobs = false
+            }
             self.jobs.append(contentsOf: jobs)
         })
     }

@@ -30,7 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UITableView.appearance().separatorColor = .clear
         UITableViewCell.appearance().backgroundColor = UIColor.clear
         UITableView.appearance().backgroundColor = UIColor.offWhite
-        
         UINavigationBar.appearance().tintColor = UIColor.white
     }
     

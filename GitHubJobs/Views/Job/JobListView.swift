@@ -27,12 +27,26 @@ struct JobListView: View {
             }
             .background(
                 NeomorphismView()
+                .contextMenu {
+                    Button(action:{
+                        // Save to core data
+                    }) {
+                        HStack {
+                            Text("Bookmark")
+                            if job.isBookmark == true {
+                                Image(systemName: "bookmark.fill")
+                            } else {
+                                Image(systemName: "bookmark")
+                            }
+                        }
+                    }
+                }
             )
             .onAppear {
                 self.model.onAppear(job: job)
             }
-        }
-        
+            
+        }            
         .navigationBarTitle("Github Jobs")
         .navigationBarItems(trailing:
             Button(action: {

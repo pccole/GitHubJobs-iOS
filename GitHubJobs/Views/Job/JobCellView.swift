@@ -13,9 +13,9 @@ struct JobCellView: View {
     let job: GithubJob
     
     var body: some View {
-        HStack {
+        HStack(spacing: 5) {
             VStack(alignment: .leading, spacing: 5) {
-                HStack(alignment: .center) {
+                HStack(alignment: .firstTextBaseline) {
                     Text(job.title)
                     .font(Font(FontStyle.headline.font!))
                     Spacer()
@@ -25,7 +25,8 @@ struct JobCellView: View {
                         } else {
                             Image(systemName: "bookmark").imageScale(.medium)
                         }
-                    }.buttonStyle(PlainButtonStyle())
+                    }
+                    .buttonStyle(PlainButtonStyle())
                 }
                 Text(job.company)
                     .font(Font(FontStyle.subhead.font!))

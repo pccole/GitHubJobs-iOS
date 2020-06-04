@@ -50,6 +50,7 @@
 		94D4DDCB245123F200B190C2 /* OptionalURLValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */; };
 		94E723322462595300AA5E66 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E723312462595300AA5E66 /* Color+Extensions.swift */; };
 		94F2EBFE246BA3470049A6AE /* NeomorphismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F2EBFD246BA3470049A6AE /* NeomorphismView.swift */; };
+		94F88714247CB5060025C2A4 /* JobCellContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F88713247CB5060025C2A4 /* JobCellContextMenu.swift */; };
 		94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BA2454A5C6002358D8 /* AttributedText.swift */; };
 		94FB28BD2454F332002358D8 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BC2454F332002358D8 /* WebView.swift */; };
 		94FB28C024550A52002358D8 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB28BF24550A52002358D8 /* UIViewExtensions.swift */; };
@@ -125,6 +126,7 @@
 		94D4DDCA245123F200B190C2 /* OptionalURLValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalURLValue.swift; sourceTree = "<group>"; };
 		94E723312462595300AA5E66 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		94F2EBFD246BA3470049A6AE /* NeomorphismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeomorphismView.swift; sourceTree = "<group>"; };
+		94F88713247CB5060025C2A4 /* JobCellContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellContextMenu.swift; sourceTree = "<group>"; };
 		94FB28BA2454A5C6002358D8 /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
 		94FB28BC2454F332002358D8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		94FB28BF24550A52002358D8 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			children = (
 				94CB9A99245027E700279210 /* JobListView.swift */,
 				9412832024511498004C2E28 /* JobCellView.swift */,
+				94F88713247CB5060025C2A4 /* JobCellContextMenu.swift */,
 				94CAC92B2452BD6200DA15AE /* JobDetailView.swift */,
 				94D43323245A58BD00B6D00D /* JobDetailVCRepresentable.swift */,
 			);
@@ -511,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94CB9A9F24502E0300279210 /* PreviewData.swift in Sources */,
+				94F88714247CB5060025C2A4 /* JobCellContextMenu.swift in Sources */,
 				94D43327245A66A400B6D00D /* String+Extensions.swift in Sources */,
 				94E723322462595300AA5E66 /* Color+Extensions.swift in Sources */,
 				94CB9A9224501D9400279210 /* GithubJob.swift in Sources */,
