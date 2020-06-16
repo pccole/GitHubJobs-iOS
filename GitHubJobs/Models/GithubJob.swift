@@ -9,17 +9,18 @@
 import Foundation
 
 public struct GithubJob: Codable {
-    public let id: String
-    public let type: String
-    @URLValue public var url: URL
+    let company: String
+    @OptionalURLValue var companyLogo: URL?
+    @OptionalURLValue var companyUrl: URL?
     @DateValue var createdAt: Date
-    public let company: String
-    @OptionalURLValue public var companyUrl: URL?
-    let location: String
-    let title: String
     let description: String
     let howToApply: String
-    @OptionalURLValue public var companyLogo: URL?
+    public let id: String
+    let location: String
+    let title: String
+    let type: String
+    @URLValue var url: URL
+    
     var isBookmark: Bool? = false
 }
 

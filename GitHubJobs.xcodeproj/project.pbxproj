@@ -15,6 +15,8 @@
 		947A91E52453CA5600D09F2D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E42453CA5600D09F2D /* SearchView.swift */; };
 		947A91E72453CE3600D09F2D /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E62453CE3600D09F2D /* SearchParameters.swift */; };
 		947A91E92453FAC700D09F2D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E82453FAC700D09F2D /* Network.swift */; };
+		948175382490A6A500202002 /* GitJob+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948175362490A6A500202002 /* GitJob+CoreDataClass.swift */; };
+		948175392490A6A500202002 /* GitJob+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948175372490A6A500202002 /* GitJob+CoreDataProperties.swift */; };
 		94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94835785245293970093BC6C /* NavigationConfigurator.swift */; };
 		9493C3F4245F7628008B996C /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C3F3245F7628008B996C /* UIFont+Extensions.swift */; };
 		9493C400245FA18F008B996C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3F5245FA18E008B996C /* OpenSans-Regular.ttf */; };
@@ -84,6 +86,8 @@
 		947A91E42453CA5600D09F2D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		947A91E62453CE3600D09F2D /* SearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParameters.swift; sourceTree = "<group>"; };
 		947A91E82453FAC700D09F2D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		948175362490A6A500202002 /* GitJob+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitJob+CoreDataClass.swift"; sourceTree = "<group>"; };
+		948175372490A6A500202002 /* GitJob+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitJob+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		94835785245293970093BC6C /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		9493C3F3245F7628008B996C /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		9493C3F5245FA18E008B996C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 		94CB9A9024501D7600279210 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				948175362490A6A500202002 /* GitJob+CoreDataClass.swift */,
+				948175372490A6A500202002 /* GitJob+CoreDataProperties.swift */,
 				94CB9A9124501D9400279210 /* GithubJob.swift */,
 				947A91E62453CE3600D09F2D /* SearchParameters.swift */,
 			);
@@ -534,9 +540,11 @@
 				947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */,
 				94CB9A9A245027E700279210 /* JobListView.swift in Sources */,
 				94FB28C024550A52002358D8 /* UIViewExtensions.swift in Sources */,
+				948175392490A6A500202002 /* GitJob+CoreDataProperties.swift in Sources */,
 				9493C3F4245F7628008B996C /* UIFont+Extensions.swift in Sources */,
 				94CB9A97245020CD00279210 /* URLValue.swift in Sources */,
 				94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */,
+				948175382490A6A500202002 /* GitJob+CoreDataClass.swift in Sources */,
 				9412832124511498004C2E28 /* JobCellView.swift in Sources */,
 				947A91E52453CA5600D09F2D /* SearchView.swift in Sources */,
 				94D43322245A2BD500B6D00D /* JobDetailViewController.swift in Sources */,

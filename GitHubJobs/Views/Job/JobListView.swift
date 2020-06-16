@@ -45,7 +45,6 @@ struct JobListView: View {
             .onAppear {
                 self.model.onAppear(job: job)
             }
-            
         }            
         .navigationBarTitle("Github Jobs")
         .navigationBarItems(trailing:
