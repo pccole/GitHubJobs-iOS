@@ -24,8 +24,12 @@ public struct PreviewData {
         }
         
         do {
+            guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
+                fatalError("Failed to retrieve context")
+            }
             let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
+            decoder.userInfo[codingUserInfoKeyManagedObjectContext] = DataStore.shared.persistentContainer.viewContext
             let json = try decoder.decode([GithubJob].self, from: data)
 //            print(json)
             return json

@@ -16,21 +16,19 @@ struct JobCellView: View {
         HStack(spacing: 5) {
             VStack(alignment: .leading, spacing: 5) {
                 HStack(alignment: .firstTextBaseline) {
-                    Text(job.title)
+                    Text(job.title!)
                     .font(Font(FontStyle.headline.font!))
                     Spacer()
                     Button(action:{}) {
-                        if job.isBookmark == true {
-                            Image(systemName: "bookmark.fill").imageScale(.medium)
-                        } else {
-                            Image(systemName: "bookmark").imageScale(.medium)
-                        }
+                        
+                        Image(systemName: "bookmark.fill").imageScale(.medium)
+                    
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
-                Text(job.company)
+                Text(job.company!)
                     .font(Font(FontStyle.subhead.font!))
-                Text(job.location)
+                Text(job.location!)
                     .font(Font(FontStyle.footnote.font!))
                 HStack(spacing: 15) {
                     HStack(spacing: 5) {
@@ -40,7 +38,7 @@ struct JobCellView: View {
                     }
                     HStack(spacing: 5) {
                         Image(uiImage: UIImage(systemName: "briefcase", withConfiguration: UIImage.SymbolConfiguration(textStyle: .footnote))!)
-                        Text(job.type)
+                        Text(job.type!)
                             .font(Font(FontStyle.footnote.font!))
                     }
                 }

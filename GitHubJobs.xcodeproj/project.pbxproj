@@ -11,12 +11,12 @@
 		9412831924510D4F004C2E28 /* GitHubJobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412831824510D4F004C2E28 /* GitHubJobsTests.swift */; };
 		9412832124511498004C2E28 /* JobCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412832024511498004C2E28 /* JobCellView.swift */; };
 		9427049424789C980069278C /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9427049324789C980069278C /* JSONDecoder+Extensions.swift */; };
+		946EA28F2499BEC500E9CF07 /* CodingUserInfoKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946EA28E2499BEC500E9CF07 /* CodingUserInfoKey+Extensions.swift */; };
+		946EA2912499C22F00E9CF07 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946EA2902499C22F00E9CF07 /* DataStore.swift */; };
 		947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91DC24538B6900D09F2D /* NavigationController.swift */; };
 		947A91E52453CA5600D09F2D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E42453CA5600D09F2D /* SearchView.swift */; };
 		947A91E72453CE3600D09F2D /* SearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E62453CE3600D09F2D /* SearchParameters.swift */; };
 		947A91E92453FAC700D09F2D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A91E82453FAC700D09F2D /* Network.swift */; };
-		948175382490A6A500202002 /* GitJob+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948175362490A6A500202002 /* GitJob+CoreDataClass.swift */; };
-		948175392490A6A500202002 /* GitJob+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948175372490A6A500202002 /* GitJob+CoreDataProperties.swift */; };
 		94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94835785245293970093BC6C /* NavigationConfigurator.swift */; };
 		9493C3F4245F7628008B996C /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C3F3245F7628008B996C /* UIFont+Extensions.swift */; };
 		9493C400245FA18F008B996C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3F5245FA18E008B996C /* OpenSans-Regular.ttf */; };
@@ -82,12 +82,12 @@
 		9412831A24510D4F004C2E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9412832024511498004C2E28 /* JobCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellView.swift; sourceTree = "<group>"; };
 		9427049324789C980069278C /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
+		946EA28E2499BEC500E9CF07 /* CodingUserInfoKey+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+Extensions.swift"; sourceTree = "<group>"; };
+		946EA2902499C22F00E9CF07 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		947A91DC24538B6900D09F2D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		947A91E42453CA5600D09F2D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		947A91E62453CE3600D09F2D /* SearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParameters.swift; sourceTree = "<group>"; };
 		947A91E82453FAC700D09F2D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		948175362490A6A500202002 /* GitJob+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitJob+CoreDataClass.swift"; sourceTree = "<group>"; };
-		948175372490A6A500202002 /* GitJob+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitJob+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		94835785245293970093BC6C /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		9493C3F3245F7628008B996C /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		9493C3F5245FA18E008B996C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -217,6 +217,7 @@
 				94CB9A6C2450057C00279210 /* Info.plist */,
 				94CB9A5B2450057B00279210 /* AppDelegate.swift */,
 				94CB9A5D2450057B00279210 /* SceneDelegate.swift */,
+				946EA2902499C22F00E9CF07 /* DataStore.swift */,
 				947A91E82453FAC700D09F2D /* Network.swift */,
 				94D43325245A664400B6D00D /* Extensions */,
 				94FB28BE24550997002358D8 /* UIViewExtensions */,
@@ -273,8 +274,6 @@
 		94CB9A9024501D7600279210 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				948175362490A6A500202002 /* GitJob+CoreDataClass.swift */,
-				948175372490A6A500202002 /* GitJob+CoreDataProperties.swift */,
 				94CB9A9124501D9400279210 /* GithubJob.swift */,
 				947A91E62453CE3600D09F2D /* SearchParameters.swift */,
 			);
@@ -335,6 +334,7 @@
 				94E723312462595300AA5E66 /* Color+Extensions.swift */,
 				94A8C76F246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift */,
 				9427049324789C980069278C /* JSONDecoder+Extensions.swift */,
+				946EA28E2499BEC500E9CF07 /* CodingUserInfoKey+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -527,6 +527,7 @@
 				94F2EBFE246BA3470049A6AE /* NeomorphismView.swift in Sources */,
 				94A8C770246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift in Sources */,
 				94FB28BB2454A5C6002358D8 /* AttributedText.swift in Sources */,
+				946EA28F2499BEC500E9CF07 /* CodingUserInfoKey+Extensions.swift in Sources */,
 				947A91E92453FAC700D09F2D /* Network.swift in Sources */,
 				94D43324245A58BD00B6D00D /* JobDetailVCRepresentable.swift in Sources */,
 				94CB9A5C2450057B00279210 /* AppDelegate.swift in Sources */,
@@ -540,12 +541,11 @@
 				947A91DD24538B6900D09F2D /* NavigationController.swift in Sources */,
 				94CB9A9A245027E700279210 /* JobListView.swift in Sources */,
 				94FB28C024550A52002358D8 /* UIViewExtensions.swift in Sources */,
-				948175392490A6A500202002 /* GitJob+CoreDataProperties.swift in Sources */,
 				9493C3F4245F7628008B996C /* UIFont+Extensions.swift in Sources */,
 				94CB9A97245020CD00279210 /* URLValue.swift in Sources */,
 				94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */,
-				948175382490A6A500202002 /* GitJob+CoreDataClass.swift in Sources */,
 				9412832124511498004C2E28 /* JobCellView.swift in Sources */,
+				946EA2912499C22F00E9CF07 /* DataStore.swift in Sources */,
 				947A91E52453CA5600D09F2D /* SearchView.swift in Sources */,
 				94D43322245A2BD500B6D00D /* JobDetailViewController.swift in Sources */,
 				94CB9A612450057B00279210 /* GitHubJobs.xcdatamodeld in Sources */,
@@ -693,6 +693,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cole.GitHubJobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -869,6 +870,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cole.GitHubJobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -891,6 +893,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cole.GitHubJobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;

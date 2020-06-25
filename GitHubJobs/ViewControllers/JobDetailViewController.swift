@@ -45,7 +45,7 @@ class JobDetailViewController: UIViewController {
     
     private lazy var howToApplyTextView: UITextView = {
         let textView = newTextView()
-        textView.setHTML(text: job.howToApply)
+        textView.setHTML(text: job.howToApply!)
         return textView
     }()
     

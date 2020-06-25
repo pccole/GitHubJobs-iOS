@@ -32,12 +32,8 @@ struct JobListView: View {
                         // Save to core data
                     }) {
                         HStack {
-                            Text("Bookmark")
-                            if job.isBookmark == true {
-                                Image(systemName: "bookmark.fill")
-                            } else {
-                                Image(systemName: "bookmark")
-                            }
+                            Text("Bookmark")                            
+                            Image(systemName: "bookmark")
                         }
                     }
                 }
