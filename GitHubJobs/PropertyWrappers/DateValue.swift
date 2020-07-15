@@ -17,7 +17,7 @@ public protocol DateValueCodableStrategy {
 
 @propertyWrapper
 public struct DateValue: Codable {
-    private let value: String
+    private var value: String
     public var wrappedValue: Date
     
     private static var formatter: DateFormatter {

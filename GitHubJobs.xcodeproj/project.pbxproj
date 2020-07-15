@@ -31,6 +31,7 @@
 		9493C409245FA18F008B996C /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */; };
 		9493C40A245FA18F008B996C /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */; };
 		9493C40C245FA81E008B996C /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493C40B245FA81E008B996C /* UITextView+Extensions.swift */; };
+		9498925D24BD645800E50B9D /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9498925C24BD645800E50B9D /* Date+Extensions.swift */; };
 		94A8C770246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8C76F246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift */; };
 		94CAC92C2452BD6200DA15AE /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAC92B2452BD6200DA15AE /* JobDetailView.swift */; };
 		94CB9A5C2450057B00279210 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CB9A5B2450057B00279210 /* AppDelegate.swift */; };
@@ -102,6 +103,7 @@
 		9493C3FE245FA18F008B996C /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		9493C3FF245FA18F008B996C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		9493C40B245FA81E008B996C /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		9498925C24BD645800E50B9D /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		94A8C76F246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBarAppearance+Extensions.swift"; sourceTree = "<group>"; };
 		94CAC92B2452BD6200DA15AE /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
 		94CB9A582450057B00279210 /* GitHubJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +337,7 @@
 				94A8C76F246BB36E00C295C4 /* UINavigationBarAppearance+Extensions.swift */,
 				9427049324789C980069278C /* JSONDecoder+Extensions.swift */,
 				946EA28E2499BEC500E9CF07 /* CodingUserInfoKey+Extensions.swift */,
+				9498925C24BD645800E50B9D /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				9493C3F4245F7628008B996C /* UIFont+Extensions.swift in Sources */,
 				94CB9A97245020CD00279210 /* URLValue.swift in Sources */,
 				94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */,
+				9498925D24BD645800E50B9D /* Date+Extensions.swift in Sources */,
 				9412832124511498004C2E28 /* JobCellView.swift in Sources */,
 				946EA2912499C22F00E9CF07 /* DataStore.swift in Sources */,
 				947A91E52453CA5600D09F2D /* SearchView.swift in Sources */,

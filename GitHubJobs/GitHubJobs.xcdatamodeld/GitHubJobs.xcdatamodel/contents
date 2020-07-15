@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="GithubJob" representedClassName=".GithubJob" syncable="YES">
-        <attribute name="company" optional="YES" attributeType="String"/>
-        <attribute name="companyLogo" optional="YES" attributeType="String"/>
-        <attribute name="companyUrl" optional="YES" attributeType="String"/>
-        <attribute name="createdAt" optional="YES" attributeType="String"/>
-        <attribute name="howToApply" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="jobDescription" optional="YES" attributeType="String"/>
-        <attribute name="jobURL" optional="YES" attributeType="String"/>
-        <attribute name="location" optional="YES" attributeType="String"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
-        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="company" attributeType="String" defaultValueString=""/>
+        <attribute name="companyLogoString" optional="YES" attributeType="String"/>
+        <attribute name="companyURLString" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" attributeType="String" defaultValueString=""/>
+        <attribute name="howToApply" attributeType="String" defaultValueString=""/>
+        <attribute name="id" attributeType="String" defaultValueString=""/>
+        <attribute name="jobDescription" attributeType="String" defaultValueString=""/>
+        <attribute name="jobURLString" attributeType="String" defaultValueString=""/>
+        <attribute name="location" attributeType="String" defaultValueString=""/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <attribute name="type" attributeType="String" defaultValueString=""/>
     </entity>
     <elements>
         <element name="GithubJob" positionX="-63" positionY="-18" width="128" height="208"/>
