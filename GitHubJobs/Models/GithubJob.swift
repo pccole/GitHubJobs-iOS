@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-public final class GithubJob: NSManagedObject, Codable {
+public final class GithubJob: NSManagedObject, Decodable {
     @NSManaged public var company: String
     @NSManaged public var companyLogoString: String?
     @NSManaged public var jobDescription: String
@@ -54,13 +54,6 @@ public final class GithubJob: NSManagedObject, Codable {
         case title
         case type
         case location
-    }
-    
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(company, forKey: .company)
-        
     }
     
     public required init(from decoder: Decoder) throws {

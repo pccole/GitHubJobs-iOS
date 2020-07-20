@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9401E30824C1248600DB22A7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9401E30724C1248600DB22A7 /* TabBarView.swift */; };
 		9407339D2460E628002C3F87 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9407339C2460E628002C3F87 /* DateValue.swift */; };
 		9412831924510D4F004C2E28 /* GitHubJobsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412831824510D4F004C2E28 /* GitHubJobsTests.swift */; };
 		9412832124511498004C2E28 /* JobCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412832024511498004C2E28 /* JobCellView.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9401E30724C1248600DB22A7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		9407339C2460E628002C3F87 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		9412831624510D4F004C2E28 /* GitHubJobsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubJobsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412831824510D4F004C2E28 /* GitHubJobsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubJobsTests.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			children = (
 				947A91E42453CA5600D09F2D /* SearchView.swift */,
 				94F2EBFD246BA3470049A6AE /* NeomorphismView.swift */,
+				9401E30724C1248600DB22A7 /* TabBarView.swift */,
 				94FB28B92454A17A002358D8 /* Job */,
 			);
 			path = Views;
@@ -545,6 +548,7 @@
 				94CB9A9A245027E700279210 /* JobListView.swift in Sources */,
 				94FB28C024550A52002358D8 /* UIViewExtensions.swift in Sources */,
 				9493C3F4245F7628008B996C /* UIFont+Extensions.swift in Sources */,
+				9401E30824C1248600DB22A7 /* TabBarView.swift in Sources */,
 				94CB9A97245020CD00279210 /* URLValue.swift in Sources */,
 				94835786245293970093BC6C /* NavigationConfigurator.swift in Sources */,
 				9498925D24BD645800E50B9D /* Date+Extensions.swift in Sources */,
